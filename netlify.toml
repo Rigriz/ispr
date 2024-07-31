@@ -1,6 +1,6 @@
 [build]
   command = "npm install next && npm run build"
-  publish = "./.next"
+  publish = "app/.next"
   base = "/app"
 
 [[plugins]]
