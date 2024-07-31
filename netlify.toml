@@ -3,5 +3,5 @@
   command = "npm install next && npm run build"
   publish = "/.next"
 
-[context.deploy-preview]
-  command = "npm run build-preview"
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
