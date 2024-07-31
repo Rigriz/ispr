@@ -3,8 +3,7 @@
   publish = "app/.next"
   base = "/app"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+
 
 [context.deploy-preview]
   command = "npm run build-preview"
