@@ -10,7 +10,6 @@ const connectToMongo = async () => {
     const cursor = db.collection("webpages").find();
     const documents = await cursor.toArray();
     const jsonData = documents.map((doc) => JSON.stringify(doc));
-    console.log(jsonData);
     await client.close();
     return jsonData;
   } catch (err) {
