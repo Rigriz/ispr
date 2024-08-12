@@ -4,7 +4,7 @@ async function getStaticProps() {
   try {
     const client = new MongoClient(process.env.MONGODB_URI);
     await client.connect();
-    console.log("Connected successfully to MongoDB");
+    //console.log("Connected successfully to MongoDB");
     const db = client.db(process.env.DB_NAME);
     const cursor = db
       .collection(process.env.WEB_CONTENT)
