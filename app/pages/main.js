@@ -16,7 +16,7 @@ async function featch() {
 }
 async function MainPage() {
   const data = await featch();
-  console.log(data.page,"gotta");
+  console.log("gotta");
   //console.log(data, "heimana");
   return (
     <>
