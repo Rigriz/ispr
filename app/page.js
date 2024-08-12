@@ -10,6 +10,7 @@ const connectToMongo = async () => {
     const cursor = db.collection("webpages").find();
     const documents = await cursor.toArray();
     const jsonData = documents.map((doc) => JSON.stringify(doc));
+    console.log(jsonData);
     await client.close();
     return jsonData;
   } catch (err) {
@@ -19,14 +20,11 @@ const connectToMongo = async () => {
 const data = connectToMongo();
 function Home() {
   return (
-    <div>
-      <div>
-        <h1>Hii</h1>
-        <p>hi</p>
-        <p>{data}</p>
+    <main className={styles.main}>
+      <div className={style.imagecontainer}>
+        <img className={style.image} src="./needed/main.png" alt="College Picture" />
       </div>
-    </div>
+      <MainPage />
+    </main>
   );
 }
-
-export default Home;
