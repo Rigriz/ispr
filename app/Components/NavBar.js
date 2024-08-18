@@ -1,7 +1,7 @@
+'use client'
 import Link from "next/link";
 import Shtyles from "../Styles/Navbar.module.css";
-
-const Navbar = () => {
+function Navbar () {
   return (
     <>
       <div className={Shtyles.header}>
@@ -21,14 +21,30 @@ const Navbar = () => {
       <nav className={Shtyles.nav}>
         <ul className={Shtyles.navul}>
           <li className={Shtyles.navLi}>
-            <Link href="#">
+            <Link href="/">
               <span className={Shtyles.a}>Home</span>
             </Link>
           </li>
-          <li className={Shtyles.navLi}>
-            <Link href="./Pages/About-us">
-              <span className={Shtyles.a}>About-us</span>
+          <li className={`${Shtyles.navLi}  ${Shtyles.dropdownBtn}`}>
+          <Link href="/about">
+              <span className={Shtyles.a}>About-Us</span>
             </Link>
+            <ul className={Shtyles.dropContent}>
+              <li>
+                <Link href="/about">
+                  <span className={Shtyles.a}>
+                    About-us
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/SriKrishnaTrust">
+                  <span className={Shtyles.a}>
+                    Sri-Krishna-Shikshana-Prathisthana-Trust
+                  </span>
+                </Link>
+              </li>
+            </ul>
           </li>
           <li className={`${Shtyles.navLi}  ${Shtyles.dropdownBtn}`}>
             <Link href="./Pages/About-us">
@@ -84,7 +100,7 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-      </nav>
+      </nav >
     </>
   );
 };

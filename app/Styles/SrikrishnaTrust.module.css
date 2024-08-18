@@ -1,0 +1,180 @@
+.sri {
+  display: contents;
+}
+
+.group {
+  margin: 0%;
+}
+
+.heading {
+  line-height: 1.5rem;
+  text-align: justify;
+  color: rgb(96, 146, 216);
+  font-weight: bold;
+  font-size: large;
+}
+
+.description {
+  font-size: smaller;
+}
+
+.FacultyTitle {
+  line-height: 1.5em;
+  text-align: justify;
+  color: rgb(86, 156, 254);
+}
+
+.container {
+  margin: 1%;
+  padding: 1%;
+  width: 60vw;
+  max-width: 800px;
+  /* Added max-width for large screens */
+}
+
+.th {
+  padding: 2vh 4vw;
+  background-color: rgb(47, 191, 244);
+  border: none;
+}
+
+.tr {
+  padding: 1vh 1vw;
+  background-color: rgba(211, 211, 211, 0.265);
+  line-height: 1.5;
+  text-align: center;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.td {
+  border: none;
+  padding: 5vh 3vw;
+}
+
+.paragraph {
+  line-height: 1.5em;
+  /* Changed to relative unit */
+  text-align: justify;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+@media (max-width: 479px) {
+  .heading {
+    font-size: small;
+    line-height: 1rem;
+  }
+
+  .description {
+    font-size: x-small;
+  }
+
+  .FacultyTitle {
+    font-size: small;
+    line-height: 1rem;
+  }
+
+  .container {
+    width: 95vw;
+  }
+
+  .th {
+    padding: 0.2vh 1vw;
+    font-size: xx-small;
+  }
+
+  .tr {
+    padding: 0.2vh 0.2vw;
+    font-size: xx-small;
+  }
+
+  .td {
+    padding: 1.5vh 1vw;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .heading {
+    font-size: x-larger;
+    line-height: 1rem;
+  }
+  .description {
+    font-size: small;
+  }
+  .FacultyTitle {
+    font-size: small;
+    line-height: 1rem;
+  }
+  .container {
+    width: 90vw;
+  }
+
+  .th {
+    padding: 0.5vh 1.5vw;
+  }
+
+  .tr {
+    padding: 0.5vh 0.5vw;
+  }
+
+  .td {
+    padding: 2vh 1.5vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .heading {
+    font-size: x-large;
+    line-height: 2.5rem;
+  }
+  .description {
+    font-size: medium;
+  }
+  .FacultyTitle {
+    font-size: medium;
+    line-height: 2.5rem;
+  }
+  .container {
+    width: 80vw;
+  }
+  .th {
+    padding: 1vh 2vw;
+  }
+
+  .tr {
+    padding: 0.5vh 1vw;
+  }
+
+  .td {
+    padding: 3vh 2vw;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .heading{
+    font-size: xx-large;
+    line-height: 3rem;
+  }
+  .description {
+    font-size: large;
+  }
+  .FacultyTitle {
+    font-size: large;
+    line-height: 3rem;
+  }
+  .container {
+    width: 70vw;
+  }
+  .th {
+    padding: 1.5vh 3vw;
+  }
+
+  .tr {
+    padding: 1vh 1.5vw;
+  }
+
+  .td {
+    padding: 4vh 2.5vw;
+  }
+}

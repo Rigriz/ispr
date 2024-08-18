@@ -112,7 +112,7 @@
 /* Phone size (less than 768px) */
 @media (max-width: 768px) {
   .main, .leftContainer, .rightContainer {
-    padding: 5px 5px;
+    padding: 1% 2%;
   }
   .leftContainer {
     width: 100%;
@@ -142,7 +142,7 @@
 /* Small phone size (less than 420px) */
 @media (max-width: 420px) {
   .main, .leftContainer, .rightContainer {
-    padding: 3px 3px;
+    padding:1% 2%;;
   }
   .leftContainer {
     width: 90%;
@@ -196,7 +196,7 @@
 /* Extra small phone size (less than 340px) */
 @media (max-width: 340px) {
   .main, .leftContainer, .rightContainer {
-    padding: 2px 2px;
+    padding: 1% 2%;
   }
   .leftContainer {
     width: 90%;
