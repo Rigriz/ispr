@@ -16,10 +16,10 @@ async function featch() {
 }
 const Listsetter = ({ data, list }) => {
     const id = [list];
-    console.log(data?.[id]);
+    //console.log(data?.[id]);
     return (
         <>
-            {data && data[identifier] ? (
+            {data && data[list] ? (
                 data?.[id].map((header, index) => (
                     //  console.log(header, index),
                     <ul key={index} className={styles.container}>

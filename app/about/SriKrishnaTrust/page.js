@@ -1,6 +1,6 @@
 import DOMPurify from "isomorphic-dompurify";
-import getStaticProps from "../components/getdata";
-import styles from "../Styles/SrikrishnaTrust.module.css";
+import getStaticProps from "@/app/components/getdata";
+import styles from "@/app/Styles/SrikrishnaTrust.module.css";
 async function featch() {
     try {
         const data = await getStaticProps();
@@ -14,53 +14,52 @@ async function featch() {
         return { error: error.message }; // Return an error object on failure
     }
 }
+const TrustMembersTable = ({data, identifier }) => {
+    // console.log(data);
+    const id = [identifier]
+   // console.log(data?.[id]);
+    let tableType = ["SL.No", "Name", "Designation"];;
+    if (identifier === 'trustMembers' || identifier === 'GoverningMembers' || identifier === 'OfficeFaculties') {
+        tableType = ["SL.No", "Name", "Designation"];
+    } else if (identifier === 'CSEFaculties' || identifier === "ADFTFaculties" || identifier === 'MECFaculties' || identifier === 'ECFaculties') {
+        tableType = ["SL.No", "Name", "Designation", "Qualification"];
+    }
+    //  console.log(tableType);
+    return (
+        <table>
+            <thead className={styles.th}>
+                <tr className={styles.tr} >
+                    {tableType.map((header, index) => (
+                        <th className={styles.th} key={index}>{header}</th>
+                    ))}
+                </tr>
+            </thead>
+            <tbody>
+                {data && data[identifier] ? (
+                    data[identifier].map((item, index) => (
+                       // console.log(`Item at index ${index}:`, item), //index is number 0 and item is single name and designation
+                        <tr className={styles.tr} key={index}>
+                            {tableType && tableType.map((header, headerIndex) => (
+                              //  console.log(`singleunit:${headerIndex}: and ${header}: accessing by headerofitem: ${item[header]}`),
+                                <td className={styles.td} key={headerIndex}>
+                                    {header === "SL.No" ? index + 1 : item[header]}
+                                </td>
+                            ))}
+                        </tr>
+                    ))
+                ) : (
+                    <tr>
+                        <td colSpan={tableType.length}>No data available</td>
+                    </tr>
+                )}
+            </tbody>
+        </table>
+    );
+}
 export default async function aboutus() {
     const data = await featch();
     //console.log(data.trustMembers, "gotta");
-    console.log(data, "heimana")
-
-    const TrustMembersTable = ({data, identifier }) => {
-        // console.log(data);
-        const id = [identifier]
-        console.log(data?.[id]);
-        let tableType = ["SL.No", "Name", "Designation"];;
-        if (identifier === 'trustMembers' || identifier === 'GoverningMembers' || identifier === 'OfficeFaculties') {
-            tableType = ["SL.No", "Name", "Designation"];
-        } else if (identifier === 'CSEFaculties' || identifier === "ADFTFaculties" || identifier === 'MECFaculties' || identifier === 'ECFaculties') {
-            tableType = ["SL.No", "Name", "Designation", "Qualification"];
-        }
-        //  console.log(tableType);
-        return (
-            <table>
-                <thead className={styles.th}>
-                    <tr className={styles.tr} >
-                        {tableType.map((header, index) => (
-                            <th className={styles.th} key={index}>{header}</th>
-                        ))}
-                    </tr>
-                </thead>
-                <tbody>
-                    {data && data[identifier] ? (
-                        data[identifier].map((item, index) => (
-                            console.log(`Item at index ${index}:`, item), //index is number 0 and item is single name and designation
-                            <tr className={styles.tr} key={index}>
-                                {tableType && tableType.map((header, headerIndex) => (
-                                    console.log(`singleunit:${headerIndex}: and ${header}: accessing by headerofitem: ${item[header]}`),
-                                    <td className={styles.td} key={headerIndex}>
-                                        {header === "SL.No" ? index + 1 : item[header]}
-                                    </td>
-                                ))}
-                            </tr>
-                        ))
-                    ) : (
-                        <tr>
-                            <td colSpan={tableType.length}>No data available</td>
-                        </tr>
-                    )}
-                </tbody>
-            </table>
-        );
-    }
+   // console.log(data, "heimana")
     return (
         <>
             <section className={styles.sri}>
@@ -104,7 +103,7 @@ export default async function aboutus() {
                     <div className={styles.container}>
                         <div className={styles.table} >
                             <TrustMembersTable data={data} identifier="ADFTFaculties" />
-                        </div>
+                        </div>/
                     </div>
                 </div>
                 <div className={styles.group}>

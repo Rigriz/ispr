@@ -1,4 +1,4 @@
-import getStaticProps from "../components/getdata";
+import getStaticProps from "@/app/components/getdata";
 import DOMPurify from "isomorphic-dompurify";
 import styles from "@/app/Styles/about.module.css";
 async function featch() {
@@ -15,7 +15,7 @@ async function featch() {
 }
 export default async function about() {
   const data = await featch();
-  console.log(data, "heimana");
+  //console.log(data, "heimana");
   return (
     <section className={styles.section}>
      <div className={styles.content}>

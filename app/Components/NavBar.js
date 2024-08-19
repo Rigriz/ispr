@@ -38,7 +38,7 @@ function Navbar () {
                 </Link>
               </li>
               <li>
-                <Link href="/SriKrishnaTrust">
+                <Link href="/about/SriKrishnaTrust">
                   <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Sri-Krishna-Shikshana-Prathisthana-Trust
                   </span>
