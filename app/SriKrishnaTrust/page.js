@@ -63,7 +63,7 @@ export default async function aboutus() {
     }
     return (
         <>
-            <div className={styles.sri}>
+            <section className={styles.sri}>
                 <p className={styles.heading}>{data.page}</p>
                 <div className={styles.group}>
                     <div >
@@ -123,7 +123,7 @@ export default async function aboutus() {
                         </div>
                     </div>
                 </div>
-            </div >
+            </section>
         </>
     );
 }

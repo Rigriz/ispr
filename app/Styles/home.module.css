@@ -1,55 +1,57 @@
 .imagecontainer {
-    display: flex;
-    align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2%;
 }
 
 .image {
-    margin: 0px 0px 0px 0px;
-    width: 100vw;
-    max-width:100vw;
-    height: auto;
+  margin: 0px 0px 0px 0px;
+  width: 100vw;
+  max-width: 100vw;
+  height: auto;
 }
+
 .main-container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Header section */
-  .header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  /* Mission and Vision sections */
-  .mission, .vision {
-    background-color: #f0f0f0;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  /* Courses section */
-  .courses {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .course {
-    width: 200px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: center;
-  }
-  
-  /* Recognition section */
-  .recognition {
-    margin-top: 20px;
-  }
-  
-  /* Caution section */
-  .caution {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header section */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Mission and Vision sections */
+.mission,
+.vision {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Courses section */
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.course {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+/* Recognition section */
+.recognition {
+  margin-top: 20px;
+}
+
+/* Caution section */
+.caution {
+  text-align: center;
+  margin-top: 20px;
+}

@@ -33,7 +33,7 @@ function Navbar () {
               <li>
                 <Link href="/about">
                   <span className={Shtyles.a}>
-                    About-us
+                    Principel Desk
                   </span>
                 </Link>
               </li>
