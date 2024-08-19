@@ -32,14 +32,14 @@ function Navbar () {
             <ul className={Shtyles.dropContent}>
               <li>
                 <Link href="/about">
-                  <span className={Shtyles.a}>
+                  <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Principel Desk
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/SriKrishnaTrust">
-                  <span className={Shtyles.a}>
+                  <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Sri-Krishna-Shikshana-Prathisthana-Trust
                   </span>
                 </Link>
@@ -53,26 +53,27 @@ function Navbar () {
             <ul className={Shtyles.dropContent}>
               <li>
                 <Link href="./Pages/Computer-Science-Engineering">
-                  <span className={Shtyles.a}>
+                  <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Computer Science Engineering
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="./Pages/Electronics-Communication-Engineering">
-                  <span className={Shtyles.a}>
+                  <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Electronics & Communication Engineering
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="./Pages/Mechanical-Engineering">
-                  <span className={Shtyles.a}>Mechanical Engineering</span>
+                  <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
+                    Mechanical Engineering</span>
                 </Link>
               </li>
               <li>
                 <Link href="./Pages/Apparel-Design-Fabrication-Technology">
-                  <span className={Shtyles.a}>
+                  <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Apparel Design & Fabrication Technology
                   </span>
                 </Link>

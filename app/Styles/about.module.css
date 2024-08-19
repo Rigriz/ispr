@@ -1,5 +1,10 @@
+.section {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
 .content {
-  margin: 2% 0px 0px;
   display: flex;
   flex-direction: column;
   padding: 2%;
@@ -26,13 +31,16 @@
   padding: 1vh 9vw;
   justify-content: space-between;
 }
-.place .principle{
-  padding:12%;
+
+.place .principle {
+  padding: 12%;
 }
-.principle{
+
+.principle {
   text-align: center;
- align-self: end;
+  align-self: end;
 }
+
 .textContent {
   display: flex;
   flex-direction: column;
@@ -70,9 +78,19 @@
     flex-direction: column;
   }
 
+  .webContent {
+    flex-direction: column;
+  }
+
   .mainContent {
     gap: 0.5rem;
-    /* Adjust gap between paragraphs on smaller screens */
+    width: 96vw
+      /* Adjust gap between paragraphs on smaller screens */
+  }
+
+  .image {
+    width: 52vw;
+    height:50vh;
   }
 
   .paragraph {
@@ -81,6 +99,10 @@
 }
 
 @media (max-width: 480px) {
+  .webContent {
+    flex-direction: column;
+  }
+
   .paragraph {
     font-size: 0.8rem;
   }

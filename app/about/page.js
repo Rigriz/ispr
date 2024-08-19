@@ -17,8 +17,9 @@ export default async function about() {
   const data = await featch();
   console.log(data, "heimana");
   return (
-    <div className={styles.content}>
-      <h2 dangerouslySetInnerHTML={{
+    <section className={styles.section}>
+     <div className={styles.content}>
+       <h2 dangerouslySetInnerHTML={{
         __html: DOMPurify.sanitize(data.TrustMembertitle),
       }} />
       <div className={styles.webContent}>
@@ -95,6 +96,7 @@ export default async function about() {
           />
         </div>
       </div>
-    </div>
+      </div>
+    </section>
   );
 }
