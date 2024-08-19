@@ -19,7 +19,7 @@ export default async function aboutus() {
     //console.log(data.trustMembers, "gotta");
     console.log(data, "heimana")
 
-    const TrustMembersTable = ({ identifier }) => {
+    const TrustMembersTable = ({data, identifier }) => {
         // console.log(data);
         const id = [identifier]
         console.log(data?.[id]);
@@ -71,7 +71,7 @@ export default async function aboutus() {
                     </div>
                     <div className={styles.container}>
                         <div className={styles.table} >
-                            <TrustMembersTable identifier="trustMembers" /> </div>
+                            <TrustMembersTable data={data} identifier="trustMembers" /> </div>
                     </div>
                 </div>
                 <div className={styles.group}>
@@ -79,7 +79,7 @@ export default async function aboutus() {
                         <p className={styles.FacultyTitle}>{data.GoverningCouncilTitle}</p>
                     </div>
                     <div className={styles.container}>
-                        <div className={styles.table} ><TrustMembersTable identifier="GoverningMembers" /></div>
+                        <div className={styles.table} ><TrustMembersTable data={data} identifier="GoverningMembers" /></div>
                     </div>
                 </div>
                 <div className={styles.group}>
@@ -89,21 +89,21 @@ export default async function aboutus() {
                     <div className={styles.FacultyTitle}>{data.FacultyTitle.CSETitle}</div>
 
                     <div className={styles.container}>
-                        <div className={styles.table} ><TrustMembersTable identifier="CSEFaculties" /></div>
+                        <div className={styles.table} ><TrustMembersTable data={data} identifier="CSEFaculties" /></div>
                     </div>
                 </div>
                 <div className={styles.group}>
                     <div className={styles.FacultyTitle}>{data.FacultyTitle.ECTitle}</div>
                     <div className={styles.container}>
                         <div className={styles.table} >
-                            <TrustMembersTable identifier="ECFaculties" /> </div>
+                            <TrustMembersTable data={data} identifier="ECFaculties" /> </div>
                     </div>
                 </div>
                 <div className={styles.group}>
                     <div className={styles.FacultyTitle}>{data.FacultyTitle.ADFTTitle}</div>
                     <div className={styles.container}>
                         <div className={styles.table} >
-                            <TrustMembersTable identifier="ADTFaculties" />
+                            <TrustMembersTable data={data} identifier="ADFTFaculties" />
                         </div>
                     </div>
                 </div>
@@ -111,7 +111,7 @@ export default async function aboutus() {
                     <div className={styles.FacultyTitle}>{data.FacultyTitle.MECTitle}</div>
                     <div className={styles.container}>
                         <div className={styles.table} >
-                            <TrustMembersTable identifier="MECFaculties" />
+                            <TrustMembersTable data={data} identifier="MECFaculties" />
                         </div>
                     </div>
                 </div>
@@ -119,7 +119,7 @@ export default async function aboutus() {
                     <div className={styles.FacultyTitle}>{data.FacultyTitle.title}</div>
                     <div className={styles.container}>
                         <div className={styles.table} >
-                            <TrustMembersTable identifier="OfficeFaculties" />
+                            <TrustMembersTable data={data} identifier="OfficeFaculties" />
                         </div>
                     </div>
                 </div>

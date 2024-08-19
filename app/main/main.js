@@ -17,7 +17,7 @@ async function featch() {
 }
 async function MainPage() {
   const data = await featch();
-  console.log(data.page,"gotta");
+  console.log(data.page, "gotta");
   //console.log(data, "heimana");
   return (
     <>
@@ -170,7 +170,14 @@ async function MainPage() {
                   alt="Ragging-logo"
                 />
                 <span className={styles.Ragginglink}>
-                  For Anti-Ragging Committee list click here
+                  For Anti-Ragging Committee list
+                  <Link
+                    key={"AntiRagging"}
+                    href={"/AntiRagging"}
+                    className={styles.courseLink}
+                  >
+                   Click here
+                  </Link>
                 </span>
               </div>
             </div>

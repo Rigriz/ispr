@@ -84,13 +84,14 @@
 
   .mainContent {
     gap: 0.5rem;
-    width: 96vw
-      /* Adjust gap between paragraphs on smaller screens */
+    width: 96vw;
+    /* Adjust gap between paragraphs on smaller screens */
   }
 
   .image {
+    min-width: 88vw;
     width: 52vw;
-    height:50vh;
+    height: 74vh;
   }
 
   .paragraph {

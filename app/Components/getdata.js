@@ -9,7 +9,7 @@ async function getStaticProps() {
     const cursor = db
       .collection(process.env.WEB_CONTENT)
       .find({}, { projection: { _id: 0 } });*/
-      
+
     //const documents = await cursor.toArray();
     // console.log(documents, "Fetched documents from MongoDB");
     /*const jsonData = documents.map((doc) => JSON.stringify(doc));
@@ -17,7 +17,7 @@ async function getStaticProps() {
     //console.log(json, "Transformed JSON data");
     //await client.close();
     // Transform array into an object with unique field as keys
-    const documents =[{
+    const documents = [{
       "_id": {
         "$oid": "66a72a45305c1474d56b4288"
       },
@@ -305,7 +305,36 @@ async function getStaticProps() {
           "Designation": "Lab Instructor"
         }
       ]
-    }]
+    }, {
+      "_id": {
+        "$oid": "4b850b1cec705e609ed7"
+      },
+      "page": "AntiRagging",
+      "Title": "ANTI RAGGING",
+      "AntiRagging": "NATIONAL ANTI-RAGGING HELPLINE :",
+      "Number": "Phone No. : 1800-180 - 5522",
+      "Mailiid": "Email : helpline@antiragging.net",
+      "Headline": "ANTI – RAGGING COMMITTEE",
+      "Description": "As per the notification of AICTE, New Delhi, institutions of Technical Education all over the country are required to implement the measures under the Prevention and Prohibition of Ragging. Accordingly, we have formed an Anti-Ragging Committee, an Anti-Ragging Squad and other procedures are followed to fulfil the requirements.",
+      "Heading": "Ragging constitutes of the following Acts.",
+      "headingList": ["Any conduct by any student or students whether by words spoken or by written or by an act which as the effect of teasing, treating or handling with rudeness a fresher or any other student.", "Indulging in rowdy or in disciplined activities by any student or students which causes trouble or physical harm or psychological harm in any fresher or any other student.", "Any act by a senior student that prevents or disturbs the regular academic activity of a fresher.", "Any act of financial extortion of forceful expenditure burden put on a fresher or any student.", "Any act that effects the mental health and self-confidence of a fresher or any other student."],
+      "heading2": "Administrative action in the event of Ragging",
+      "heading2Description": "The Anti-Ragging committee of the institution shall take an appropriate decision in regard to punishment depending on the facts of each incident and nature of ragging established by the Anti-ragging squad, one or more of the following punishments, namely",
+      "heading2List": ["Suspension from attending classes", "With holding/withdrawing scholarships or other benefits", "Debarring from appearing in any test or examination.", "With holding results.", "Cancellation of admission."],
+      "heading3": "The list of Members of Anti- Ragging Committee constituted in the college is as below",
+      "CollegeMembers": [
+        { "NameoftheFaculty": "Mr. HAMSARAJA N", "Designation": "HOD [E&C DEPT]", "Position": "Co-Ordinator", "MobileNumber": "9242261740", "E-mailAddress": "nhamsaraja@gmail.com" },
+        { "NameoftheFaculty": "Mr. ASHWINI JATHAN", "Designation": "LECTURER [ADFT DEPT]", "Position": "Member", "MobileNumber": "9482893227", "E-mailAddress": "ashwinipraveen25@gmail.com" },
+        { "NameoftheFaculty": "H.K.VISHWANATHA RAO", "Designation": "RETIRED PROFESSOR", "Position": "Member", "MobileNumber": "9480655406", "E-mailAddress": "hkvrao44@gmail.com" }],
+      "heading4":"The list of Members of Anti- Ragging Squad constituted in the college is as below:",  
+      "SquadMembers": [
+        { NameoftheFaculty: "SRINATH", "Designation": "PRINCIPAL", "Position": "Co-Ordinator", "MobileNumber": "9743293148", "E-mailAddress": "srinathnyk@gmail.com" },
+        { NameoftheFaculty: "Mrs. SHWETHA P", "Designation": "Lecturer in CS", "Position": "Member", "MobileNumber": "9901190935", "E-mailAddress": "shwethap1305@gmail.com" },
+        { NameoftheFaculty: "Mrs. REKHA", "Designation": "OFFICE CLERK", "Position": "Member", "MobileNumber": "9449470293", "E-mailAddress": "rekhahegde110@gmail.com" },
+        { NameoftheFaculty: "Mrs. SONAL FERNANDES", "Designation": "H.O.D in CS", "Position": "Member", "MobileNumber": "7259838788", "E-mailAddress": "Sonalf26@gmail.com" }],
+      "FooretTitle":"NOTE",
+      "FooterDescription":"Students and Staff Members may contact any of the above mentioned Committee/Squad Members to communicate their feedback/complaints on the subject."
+      }]
     const json = documents.reduce((acc, item) => {
       if (item.page) {
         // Ensure the field exists unique key
