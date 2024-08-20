@@ -68,7 +68,7 @@ async function MainPage() {
                     __html: DOMPurify.sanitize(data.GrievanceTitle),
                   }}
                 />{" "}
-                <a href={data.GrievanceLink}>CLICK HERE</a>
+                <a className={styles.Link} href={data.GrievanceLink}>CLICK HERE</a>
               </div>
               <div className={styles.disclosure}>
                 <p
@@ -76,7 +76,7 @@ async function MainPage() {
                     __html: DOMPurify.sanitize(data.MandatoryTitle),
                   }}
                 />{" "}
-                <a href={data.MandatoryLink}>CLICK HERE</a>
+                <a className={styles.Link} href={data.MandatoryLink}>CLICK HERE</a>
               </div>
             </div>
           </div>
@@ -170,11 +170,11 @@ async function MainPage() {
                   alt="Ragging-logo"
                 />
                 <span className={styles.Ragginglink}>
-                  For Anti-Ragging Committee list
+                  For Anti-Ragging Committee list &nbsp;
                   <Link
                     key={"AntiRagging"}
                     href={"/AntiRagging"}
-                    className={styles.courseLink}
+                    className={styles.Link}
                   >
                    Click here
                   </Link>

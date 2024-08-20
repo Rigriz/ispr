@@ -102,7 +102,7 @@
   text-align: center;
   border-radius: 0.162rem;
   background-color: #4195f0;
-  padding: 0%;
+  padding: 1vh 1vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -147,7 +147,7 @@
 }
 .dropContent li {
   text-align: left;
-  margin: 1vh 0wh;
+  margin: 1vh 1wh;
 }
 .dropContent .dropa{
   display: block;

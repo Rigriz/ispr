@@ -1,4 +1,4 @@
-import { MongoClient } from "mongodb";
+//import { MongoClient } from "mongodb";
 //import "dotenv/config";
 async function getStaticProps() {
   try {
@@ -326,15 +326,70 @@ async function getStaticProps() {
         { "NameoftheFaculty": "Mr. HAMSARAJA N", "Designation": "HOD [E&C DEPT]", "Position": "Co-Ordinator", "MobileNumber": "9242261740", "E-mailAddress": "nhamsaraja@gmail.com" },
         { "NameoftheFaculty": "Mr. ASHWINI JATHAN", "Designation": "LECTURER [ADFT DEPT]", "Position": "Member", "MobileNumber": "9482893227", "E-mailAddress": "ashwinipraveen25@gmail.com" },
         { "NameoftheFaculty": "H.K.VISHWANATHA RAO", "Designation": "RETIRED PROFESSOR", "Position": "Member", "MobileNumber": "9480655406", "E-mailAddress": "hkvrao44@gmail.com" }],
-      "heading4":"The list of Members of Anti- Ragging Squad constituted in the college is as below:",  
+      "heading4": "The list of Members of Anti- Ragging Squad constituted in the college is as below:",
       "SquadMembers": [
         { NameoftheFaculty: "SRINATH", "Designation": "PRINCIPAL", "Position": "Co-Ordinator", "MobileNumber": "9743293148", "E-mailAddress": "srinathnyk@gmail.com" },
         { NameoftheFaculty: "Mrs. SHWETHA P", "Designation": "Lecturer in CS", "Position": "Member", "MobileNumber": "9901190935", "E-mailAddress": "shwethap1305@gmail.com" },
         { NameoftheFaculty: "Mrs. REKHA", "Designation": "OFFICE CLERK", "Position": "Member", "MobileNumber": "9449470293", "E-mailAddress": "rekhahegde110@gmail.com" },
         { NameoftheFaculty: "Mrs. SONAL FERNANDES", "Designation": "H.O.D in CS", "Position": "Member", "MobileNumber": "7259838788", "E-mailAddress": "Sonalf26@gmail.com" }],
-      "FooretTitle":"NOTE",
-      "FooterDescription":"Students and Staff Members may contact any of the above mentioned Committee/Squad Members to communicate their feedback/complaints on the subject."
-      }]
+      "FooretTitle": "NOTE",
+      "FooterDescription": "Students and Staff Members may contact any of the above mentioned Committee/Squad Members to communicate their feedback/complaints on the subject."
+    },
+    {
+      "_id": {
+        "$oid": "4b850b1sdfc705e609ed7"
+      },
+      "page": "adft",
+      "Title": "Apparel Design & Fabrication Technology",
+      "list": [
+        "Intake of 27 students.",
+        "Specialized course that helps to exhibit ones idea about new and special creations.",
+        "Curriculum includes subjects on Fibre Science, Fashion Designing, Quality Management, Fabric Designing, Surface Ornamentation, Fashion Illustration etc. CAD Design & pattern making software used in the institute is one of the best and widely used by the International Apparel Industry.",
+        "Well-equipped laboratories with state of art power operated machines used in the industry.",
+        "Qualified & well experienced staff.",
+        "Training in reputed industries.",
+        "Regular Participation in National level Fashion shows/Competitions by students.",
+        "Free Internet facility for all students (with Digital Library facility).",
+        "Innovation Centre/Tinkering Lab facility."
+      ],
+      "ImageLink": "null"
+
+    },
+    {
+      "_id": {
+        "$oid": "4b85609ed7"
+      },
+      "page": "cse",
+      "Title": "Computer Science & Engineering",
+      "list": [
+        "Intake of 27 students.",
+        "Well-equipped laboratories like Data structures Lab, Web Designing, Linux Lab, Multimedia Lab etc.",
+        "Laboratories with latest computers.",
+        "Free Internet facility for all students (with Digital Library facility).",
+        "Qualified and dedicated staff.",
+        "Regular Industrial visits and Internships for practical exposure",
+        "Innovation Centre/Tinkering Lab facility."
+      ],
+      "ImageLink": "null"
+    },
+    {
+      "_id": {
+        "$oid": "4b859ed7"
+      },
+      "page": "mec",
+      "Title": "Mechanical Engineering",
+      "list": [
+        "Intake of 27 students.",
+        "Well-equipped laboratories and workshops.",
+        "CAD lab with latest software.",
+        "Free Internet facility for all students (with Digital Library facility).",
+        "Qualified and well experienced staff.",
+        "Regular Industrial visits and Internships for practical exposure.",
+        "Innovation Centre/Tinkering Lab facility."
+      ],
+      "ImageLink": "null"
+
+    }]
     const json = documents.reduce((acc, item) => {
       if (item.page) {
         // Ensure the field exists unique key

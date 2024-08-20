@@ -1,6 +1,6 @@
 import DOMPurify from "isomorphic-dompurify";
-import getStaticProps from "../components/getdata";
-import styles from "../Styles/SrikrishnaTrust.module.css";
+import getStaticProps from "@/app/components/getdata";
+import styles from "@/app/Styles/SrikrishnaTrust.module.css";
 async function featch() {
     try {
         const data = await getStaticProps();
@@ -26,7 +26,7 @@ const TrustMembersTable = ({data, identifier }) => {
     }
     //  console.log(tableType);
     return (
-        <table>
+        <table className={styles.tableMain}>
             <thead className={styles.th}>
                 <tr className={styles.tr} >
                     {tableType.map((header, index) => (
@@ -62,7 +62,8 @@ export default async function aboutus() {
     console.log(data, "heimana")
     return (
         <>
-            <section className={styles.sri}>
+            <section className={styles.section}>
+            <div className={styles.content}>
                 <p className={styles.heading}>{data.page}</p>
                 <div className={styles.group}>
                     <div >
@@ -103,7 +104,7 @@ export default async function aboutus() {
                     <div className={styles.container}>
                         <div className={styles.table} >
                             <TrustMembersTable data={data} identifier="ADFTFaculties" />
-                        </div>/
+                        </div>
                     </div>
                 </div>
                 <div className={styles.group}>
@@ -122,6 +123,7 @@ export default async function aboutus() {
                         </div>
                     </div>
                 </div>
+           </div>
             </section>
         </>
     );

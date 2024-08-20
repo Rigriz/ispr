@@ -1,7 +1,13 @@
-.sri {
+.section {
   display: grid;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0px 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
 }
 
 .group {
@@ -21,6 +27,7 @@
   max-width: 100%;
   overflow-x: auto;
   box-sizing: border-box;
+  align-self: center;
 }
 
 .container {
@@ -30,6 +37,10 @@
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
+}
+
+.tableMain {
+  align-self: center;
 }
 
 .heading {
@@ -45,10 +56,9 @@
 .FacultyTitle,
 .Title {
   margin: 0;
-  font-size: larger;
+  font-size: 2vw;
+  text-align: left;
 }
-
-
 
 .FacultyTitle {
   line-height: 1.5em;
@@ -92,16 +102,36 @@
   word-wrap: break-word;
   overflow: hidden;
 }
-
 /* Small mobile devices */
 @media (max-width: 479px) {
   .heading {
-    font-size: small;
+    font-size: x-large;
+    line-height: 2.5rem;
+  }
+
+  .description {
+    font-size: medium;
+  }
+
+  .FacultyTitle {
+    font-size: medium;
+    line-height: 2.5rem;
+  }
+
+  .th {
+    padding: 1vh 2vw;
+  }
+  
+  .td {
+    padding: 3vh 2vw;
+  }
+  .heading {
+    font-size: 3.5vh;
     line-height: 1rem;
   }
 
   .description {
-    font-size: x-small;
+    font-size: 3.4vh;
   }
 
   .FacultyTitle {
@@ -110,7 +140,7 @@
   }
 
   .container {
-    width: 95vw;
+    width: 80vw;
   }
 
   .th,
@@ -123,16 +153,14 @@
     padding: 1.5vh 1vw;
   }
 }
-
 /* Small tablets and larger phones */
-@media (min-width: 480px) and (max-width: 767px) {
+@media (max-width: 768px) {
   .group {
     padding: 0.5rem;
   }
 
   .heading {
-    font-size: x-larger;
-    line-height: 1.2rem;
+    font-size: 3.5vh;
   }
 
   .description {
@@ -159,58 +187,62 @@
   }
 }
 
-/* Tablets and small laptops */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .heading {
-    font-size: x-large;
-    line-height: 2.5rem;
-  }
-
-  .description {
-    font-size: medium;
-  }
-
-  .FacultyTitle {
-    font-size: medium;
-    line-height: 2.5rem;
-  }
-
-  .container {
-    width: 80vw;
-  }
-
-  .th {
-    padding: 1vh 2vw;
-  }
-
-  .tr {
-    padding: 0.5vh 1vw;
-  }
-
-  .td {
-    padding: 3vh 2vw;
-  }
-}
 
 /* Larger tablets and laptops */
-@media (min-width: 1024px) and (max-width: 1280px) {
-  .heading {
-    font-size: xx-large;
-    line-height: 3rem;
+@media (max-width: 340px) {
+  .section {
+    padding: 0px 10px;
   }
 
+  .content {
+    padding: 2%;
+  }
+
+  .group {
+    padding: 0rem;
+    box-sizing: border-box;
+  }
+
+  .title,
   .description {
-    font-size: large;
+    margin-bottom: 1rem;
+    text-align: center;
   }
 
-  .FacultyTitle {
-    font-size: large;
-    line-height: 3rem;
+  .table {
+    max-width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
   }
 
   .container {
-    width: 70vw;
+    justify-content: flex-end;
+    width: 95vw;
+    max-width: 800px;
+    align-self: center;
   }
+
+  .heading {
+    font-size: 0.934rem;
+    line-height: 1.3rem
+  }
+
+  .description {
+    font-size: 2vh;
+    text-align: justify;
+  }
+
+  .FacultyTitle,
+  .Title {
+    margin: 0;
+    font-size: 3vh;
+  }
+
+  .FacultyTitle {
+    line-height: 1.0em;
+    text-align: start;
+  }
+
 
   .th {
     padding: 1.5vh 3vw;
@@ -221,6 +253,7 @@
   }
 
   .td {
-    padding: 4vh 2.5vw;
+    padding: 0vh 0.5vw;
+    font-size: 0.6rem;
   }
 }

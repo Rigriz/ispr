@@ -1,3 +1,4 @@
+'use client'
 import DOMPurify from "isomorphic-dompurify";
 import getStaticProps from "../components/getdata";
 import styles from "../Styles/SrikrishnaTrust.module.css";
@@ -82,52 +83,54 @@ export default async function aboutus() {
 
     return (
         <>
-            <section className={styles.sri}>
-                <p className={styles.heading}>{data.Title}</p>
-                <div className={styles.Title}>
-                </div>
-                <div className={styles.group}>
-                    <div >
-                        <p className={styles.description}>{data.title}</p>
+            <section className={styles.section}>
+                <div className={styles.content}>
+                    <p className={styles.heading}>{data.Title}</p>
+                    <div className={styles.title}>
                     </div>
-                    <div>
-                        {data.AntiRagging}
-                        {data.Number}
-                        {data.Mailiid}
-                    </div>
-                    <div>
-                        {data.Headline}
-                        <p>{data.Description}</p>
-                    </div>
-                    <div>
-                        {data.Heading}
-                        <Listsetter data={data} list={'headingList'} />
-                    </div>
-                    <div>
-                        {data.heading2}
-                        {data.heading2Description}
-                        <Listsetter data={data} list={'heading2List'} />
-                    </div>
-                    <div>
-                        {data.heading3}
-                        <MembersTable data={data} identifier={'CollegeMembers'} />
-                    </div>
-                    <div>
-                        {data.heading4}
-                        <MembersTable data={data} identifier={'SquadMembers'} />
-                    </div>
-                    <div>
+                    <div className={styles.group}>
+                        <div >
+                            <p className={styles.description}>{data.title}</p>
+                        </div>
+                        <div>
+                            {data.AntiRagging}
+                            {data.Number}
+                            {data.Mailiid}
+                        </div>
+                        <div>
+                            {data.Headline}
+                            <p>{data.Description}</p>
+                        </div>
+                        <div>
+                            {data.Heading}
+                            <Listsetter data={data} list={'headingList'} />
+                        </div>
+                        <div>
+                            {data.heading2}
+                            {data.heading2Description}
+                            <Listsetter data={data} list={'heading2List'} />
+                        </div>
+                        <div>
+                            {data.heading3}
+                            <MembersTable data={data} identifier={'CollegeMembers'} />
+                        </div>
+                        <div>
+                            {data.heading4}
+                            <MembersTable data={data} identifier={'SquadMembers'} />
+                        </div>
+                        <div>
 
-                    </div>
-                    <div className={styles.container}>
-                        <div className={styles.table} >
+                        </div>
+                        <div className={styles.container}>
+                            <div className={styles.table} >
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <h4>{data.FooretTitle}</h4>
-                    <p>{data.FooterDescription}</p>
+                    <div>
+                        <h4>{data.FooretTitle}</h4>
+                        <p>{data.FooterDescription}</p>
 
+                    </div>
                 </div>
             </section>
         </>
