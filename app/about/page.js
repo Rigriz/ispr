@@ -5,14 +5,10 @@ import styles from "@/app/Styles/about.module.css";
 async function featch() {
   try {
     const data = await getStaticProps();
-    const content = data.props.webContent.Aboutus;
-    return content //Return the homepage content on success
+    return data.props.webContent.Aboutus;
   } catch (error) {
-    console.error(
-      "Error retrieving data from MongoDB getDataFromMongo:",
-      error,
-    );
-    return { error: error.message }; // Return an error object on failure
+    console.error("Error retrieving data:", error);
+    return { error: error.message };
   }
 }
 export default async function about() {
