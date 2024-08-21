@@ -407,8 +407,57 @@ async function getStaticProps() {
       ],
       "ImageLink": "null"
 
+    }, {
+      "_id": {
+        "$oid": "4b859ewefwefewfd7"
+      },
+      "page": "Facilities",
+      "Title": "Facilities",
+      "Title2": "Placement Cell:",
+      "Descrition": "Placement cell help students know about the industry they are getting into. The main aim of a placement cell – getting students placed in good companies, where they can start their careers.",
+      "heading": "New Campus:",
+      "NewCampusDescription": "In view of extending the vision of our President (Sri Sri Vidyasagara Theertha Swamiji) to provide quality technical education to the financially backward but meritorious students of the udupi district and to fulfill all the infrastructure related norms of AICTE, New Delhi, and the academic year 2019-20 has commenced from 01-07-2019 with state of art class rooms, Lab and workshop facilities. We have now shifted to the present 10.75 acre spacious new campus behind “Rajathadri”, (New D.C. Office), at Manipal on the Sheembra Ganapathi Temple Road, Perampally, Udupi.",
+      "heading2": "Library",
+      "LibraryList": [
+        "Our college has a well-equipped library for the benefit of staff and students.",
+        "Presently, over 8154 Technical and Non-Technical books covering all the subjects taught at Diploma level are available.",
+        "The library also subscribes to leading Technical magazines and Journals (Course wise).",
+        "Book Bank facility is available in the library for the use of students.",
+        "Digital Library facility and Multimedia computers are provided to students to encourage use of Digital medium and internet.",
+      ],
+      "LibraryListFooter": "Encyclopedia, Dictionary, General Knowledge books, Projects Reports, Bound volumes and Compact Discs are available for reference.",
+      "heading3": "Internet Facilities:",
+      "heading3desc": "Internet Facility is provided to Students and Staff free of cost, which will help them to gain knowledge and get well versed with the rapid technical advances taking place around the world in their respective fields. A separate Multimedia room consisting of 10 computers with internet facility has been provided for the same.",
+      "heading4": "Mentoring:",
+      "heading4desc": "Class Teachers monitor and assist the students in Academics and overall development. They also offer counselling to the students having personal, disciplinary or emotional problems thereby making the students to stay focused effectively to the respective courses.",
+      "heading5": "Student Scholarships:",
+      "heading5desc": "The college arranges scholarships to meritorious students from the following donors.",
+      "heading5list": [
+        "Indira Shiva Rao Trust, Udupi",
+        "Kidiyoor Nagalaxmi Srinivas Public Charitable Trust, Udupi",
+        "NSP Scholarship",
+        "SSP Scholarship"
+      ],
+      "heading5Footer": "Donors/Trusts/Alumnus interested to provide scholarships or financial assistance to our students are requested to contact the Principal.",
+     "heading6":"Lab Facilities:",
+     "heading6desc":"Every department has well equipped laboratories which help the students to gain practical knowledge.",
+      "heading7": "Computer Science & Engineering:",
+      "heading7desc": "There are 4 sections of Computer Labs with the latest machines. A separate system is provided to every student. Various Labs are Data Structures Lab, Web Designing Lab, Linux Lab, Multimedia Lab etc. which have latest software.",
+      "heading8": "Electronics & Communication Engineering:",
+      "heading6desc": "Well-equipped laboratories like Power Electronics & PLC, Advanced Microprocessors, VLSI, Analog Electronic Circuits, Digital Electronics, Microcontrollers, Basic Electronics Lab etc. help the students to conduct various experiments and gain more knowledge.",
+      "heading7": "Mechanical Engineering:",
+      "heading7desc": "Well-equipped workshop includes Machine shop, Welding shop, Sheet Metal shop, Fitting and Carpentry, Foundry Lab, Thermal Lab. Students are trained to work with Lathe machine, Milling machine, Shaper machine, Drilling machine etc. and all kinds of machineries used in Industrial applications.",
+      "heading8": "Innovation / Tinkering Lab:",
+      "heading8desc": "This is a new addition to the set of labs, where state of art tools are provide & students from all branches are encourages to work on innovative projects/products (small or big) irrespective of course selected.",
+      "heading8desc2": "Inter disciplinary products/projects are also promoted where students of different branches form teams and work on a given project. Students right from the first year are motivated to use and work at the Innovation/Tinkering Lab duly guided by faculty members.",
+      "heading9": "Apparel Design & Fabrication Technology:",
+      "heading9desc": "CAD Design & pattern making software used in the institute is one of the best and widely used by the International Apparel Industry. Well-equipped laboratories have state of the art power operated machines used in the industry.",
+      "heading10": "Extra-Curricular Activities:",
+      "heading10desc": "Extra-Curricular Activities help in the overall development of a student. Our College gives equal importance to both Academics and Co-curricular activities. Various competitions like Cook without Fire, Best from Waste, Quiz, Singing, Carom, Chess, Drawing, Rangoli etc. in addition to Sports Day, College Day help the students to showcase their hidden talents.",
+      "heading11": "Professional Practices Lab:",
+      "heading11desc": "Students are trained to give PPT presentations using the Projector, which improves their personality development, Communication skills etc. and sufficient guidance is also given which helps them to face interviews and perform well in the present competitive world with good written and oral communication skills.",
     }
-  ]
+    ]
     const json = documents.reduce((acc, item) => {
       if (item.page) {
         // Ensure the field exists unique key

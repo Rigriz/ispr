@@ -14,7 +14,7 @@ async function featch() {
         return { error: error.message }; // Return an error object on failure
     }
 }
-const TrustMembersTable = ({data, identifier }) => {
+const TrustMembersTable = ({ data, identifier }) => {
     // console.log(data);
     const id = [identifier]
     console.log(data?.[id]);
@@ -63,67 +63,67 @@ export default async function aboutus() {
     return (
         <>
             <section className={styles.section}>
-            <div className={styles.content}>
-                <p className={styles.heading}>{data.page}</p>
-                <div className={styles.group}>
-                    <div >
-                        <p className={styles.description}>{data.title}</p>
+                <div className={styles.content}>
+                    <p className={styles.heading}>{data.page}</p>
+                    <div className={styles.group}>
+                        <div >
+                            <p className={styles.description}>{data.title}</p>
+                        </div>
+                        <div className={styles.container}>
+                            <div className={styles.table} >
+                                <TrustMembersTable data={data} identifier="trustMembers" /> </div>
+                        </div>
                     </div>
-                    <div className={styles.container}>
-                        <div className={styles.table} >
-                            <TrustMembersTable data={data} identifier="trustMembers" /> </div>
+                    <div className={styles.group}>
+                        <div className={styles.Title}>
+                            <p className={styles.FacultyTitle}>{data.GoverningCouncilTitle}</p>
+                        </div>
+                        <div className={styles.container}>
+                            <div className={styles.table} ><TrustMembersTable data={data} identifier="GoverningMembers" /></div>
+                        </div>
                     </div>
-                </div>
-                <div className={styles.group}>
-                    <div className={styles.Title}>
-                        <p className={styles.FacultyTitle}>{data.GoverningCouncilTitle}</p>
-                    </div>
-                    <div className={styles.container}>
-                        <div className={styles.table} ><TrustMembersTable data={data} identifier="GoverningMembers" /></div>
-                    </div>
-                </div>
-                <div className={styles.group}>
-                    <div className={styles.Title}>
-                        <p className={styles.FacultyTitle}>{data.FacultyTitle.title}</p>
-                    </div>
-                    <div className={styles.FacultyTitle}>{data.FacultyTitle.CSETitle}</div>
+                    <div className={styles.group}>
+                        <div className={styles.Title}>
+                            <p className={styles.FacultyTitle}>{data.FacultyTitle.title}</p>
+                        </div>
+                        <div className={styles.FacultyTitle}>{data.FacultyTitle.CSETitle}</div>
 
-                    <div className={styles.container}>
-                        <div className={styles.table} ><TrustMembersTable data={data} identifier="CSEFaculties" /></div>
+                        <div className={styles.container}>
+                            <div className={styles.table} ><TrustMembersTable data={data} identifier="CSEFaculties" /></div>
+                        </div>
                     </div>
-                </div>
-                <div className={styles.group}>
-                    <div className={styles.FacultyTitle}>{data.FacultyTitle.ECTitle}</div>
-                    <div className={styles.container}>
-                        <div className={styles.table} >
-                            <TrustMembersTable data={data} identifier="ECFaculties" /> </div>
+                    <div className={styles.group}>
+                        <div className={styles.FacultyTitle}>{data.FacultyTitle.ECTitle}</div>
+                        <div className={styles.container}>
+                            <div className={styles.table} >
+                                <TrustMembersTable data={data} identifier="ECFaculties" /> </div>
+                        </div>
                     </div>
-                </div>
-                <div className={styles.group}>
-                    <div className={styles.FacultyTitle}>{data.FacultyTitle.ADFTTitle}</div>
-                    <div className={styles.container}>
-                        <div className={styles.table} >
-                            <TrustMembersTable data={data} identifier="ADFTFaculties" />
+                    <div className={styles.group}>
+                        <div className={styles.FacultyTitle}>{data.FacultyTitle.ADFTTitle}</div>
+                        <div className={styles.container}>
+                            <div className={styles.table} >
+                                <TrustMembersTable data={data} identifier="ADFTFaculties" />
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.group}>
+                        <div className={styles.FacultyTitle}>{data.FacultyTitle.MECTitle}</div>
+                        <div className={styles.container}>
+                            <div className={styles.table} >
+                                <TrustMembersTable data={data} identifier="MECFaculties" />
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.group}>
+                        <div className={styles.FacultyTitle}>{data.FacultyTitle.title}</div>
+                        <div className={styles.container}>
+                            <div className={styles.table} >
+                                <TrustMembersTable data={data} identifier="OfficeFaculties" />
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className={styles.group}>
-                    <div className={styles.FacultyTitle}>{data.FacultyTitle.MECTitle}</div>
-                    <div className={styles.container}>
-                        <div className={styles.table} >
-                            <TrustMembersTable data={data} identifier="MECFaculties" />
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.group}>
-                    <div className={styles.FacultyTitle}>{data.FacultyTitle.title}</div>
-                    <div className={styles.container}>
-                        <div className={styles.table} >
-                            <TrustMembersTable data={data} identifier="OfficeFaculties" />
-                        </div>
-                    </div>
-                </div>
-           </div>
             </section>
         </>
     );

@@ -81,7 +81,7 @@ function Navbar() {
             </ul>
           </li>
           <li className={Shtyles.navLi}>
-            <Link href="./Pages/Facilities">
+            <Link href="/facilities">
               <span className={Shtyles.a}>Facilities</span>
             </Link>
           </li>
