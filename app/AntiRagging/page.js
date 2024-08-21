@@ -1,7 +1,6 @@
-'use client'
 import DOMPurify from "isomorphic-dompurify";
 import getStaticProps from "../components/getdata";
-import styles from "../Styles/SrikrishnaTrust.module.css";
+import styles from "@/app/Styles/antiragging.module.css";
 async function featch() {
     try {
         const data = await getStaticProps();
@@ -19,11 +18,11 @@ const Listsetter = ({ data, list }) => {
     const id = [list];
     //console.log(data?.[id]);
     return (
-        <>
+        <div className={styles.li}>
             {data && data[list] ? (
                 data?.[id].map((header, index) => (
                     //  console.log(header, index),
-                    <ul key={index} className={styles.container}>
+                    <ul key={index} className={styles.list}>
                         <li key={index}>{header}</li>
                     </ul>
                 ))) : (
@@ -32,7 +31,7 @@ const Listsetter = ({ data, list }) => {
                 </tr>
             )
             }
-        </>
+        </div>
     );
 }
 const MembersTable = ({ data, identifier }) => {
@@ -77,59 +76,56 @@ const MembersTable = ({ data, identifier }) => {
 }
 export default async function aboutus() {
     const data = await featch();
-    //console.log(data, "gotta");
+    console.log(data, "gotta");
     // console.log(data, "heimana")
-
-
     return (
         <>
             <section className={styles.section}>
                 <div className={styles.content}>
-                    <p className={styles.heading}>{data.Title}</p>
+                    <p className={styles.headline}>{data.Title}</p>
                     <div className={styles.title}>
                     </div>
                     <div className={styles.group}>
                         <div >
                             <p className={styles.description}>{data.title}</p>
                         </div>
-                        <div>
-                            {data.AntiRagging}
-                            {data.Number}
+                        <div className={styles.contect}>
+                            {data.AntiRagging}<br />
+                            {data.Number}<br />
                             {data.Mailiid}
                         </div>
                         <div>
-                            {data.Headline}
-                            <p>{data.Description}</p>
+                            <p className={styles.headline}>{data.Headline}</p>
+                            <p className={styles.description}>{data.Description}</p>
                         </div>
                         <div>
-                            {data.Heading}
-                            <Listsetter data={data} list={'headingList'} />
+                            <p className={styles.heading}> {data.Heading}</p>
+                            <Listsetter className={styles.li} data={data} list={'headingList'} />
                         </div>
                         <div>
-                            {data.heading2}
-                            {data.heading2Description}
+                            <p className={styles.heading}>{data.heading2}</p>
+                            <p className={styles.description}>
+                                {data.heading2Description}</p>
                             <Listsetter data={data} list={'heading2List'} />
                         </div>
-                        <div>
-                            {data.heading3}
-                            <MembersTable data={data} identifier={'CollegeMembers'} />
-                        </div>
-                        <div>
-                            {data.heading4}
-                            <MembersTable data={data} identifier={'SquadMembers'} />
-                        </div>
-                        <div>
 
-                        </div>
+                        <p className={styles.heading}>
+                            {data.heading3}</p>
                         <div className={styles.container}>
                             <div className={styles.table} >
+                                <MembersTable data={data} identifier={'CollegeMembers'} />
+                            </div>
+                        </div>
+                        <p className={styles.heading}>{data.heading4}</p>
+                        <div className={styles.container}>
+                            <div className={styles.table} >
+                                <MembersTable data={data} identifier={'SquadMembers'} />
                             </div>
                         </div>
                     </div>
                     <div>
-                        <h4>{data.FooretTitle}</h4>
-                        <p>{data.FooterDescription}</p>
-
+                        <h4 className={styles.FooterNote} >{data.FooretTitle}</h4>
+                        <p className={styles.FooterNote}>{data.FooterDescription}</p>
                     </div>
                 </div>
             </section>
