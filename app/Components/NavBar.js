@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link";
 import Shtyles from "../Styles/Navbar.module.css";
-function Navbar () {
+function Navbar() {
   return (
     <>
       <div className={Shtyles.header}>
@@ -26,7 +26,7 @@ function Navbar () {
             </Link>
           </li>
           <li className={`${Shtyles.navLi}  ${Shtyles.dropdownBtn}`}>
-          <Link href="/about">
+            <Link href="/about">
               <span className={Shtyles.a}>About-Us</span>
             </Link>
             <ul className={Shtyles.dropContent}>
@@ -47,32 +47,32 @@ function Navbar () {
             </ul>
           </li>
           <li className={`${Shtyles.navLi}  ${Shtyles.dropdownBtn}`}>
-            <Link href="./Pages/About-us">
+            <Link href="/departments">
               <span className={Shtyles.a}>Department</span>
             </Link>
             <ul className={Shtyles.dropContent}>
               <li>
-                <Link href="./Pages/Computer-Science-Engineering">
+                <Link href="/departments/Cse">
                   <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Computer Science Engineering
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="./Pages/Electronics-Communication-Engineering">
+                <Link href="/departments/ec">
                   <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Electronics & Communication Engineering
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="./Pages/Mechanical-Engineering">
+                <Link href="/departments/mec">
                   <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Mechanical Engineering</span>
                 </Link>
               </li>
               <li>
-                <Link href="./Pages/Apparel-Design-Fabrication-Technology">
+                <Link href="/departments/adft">
                   <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Apparel Design & Fabrication Technology
                   </span>

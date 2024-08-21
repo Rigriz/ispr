@@ -12,13 +12,17 @@
 
 .group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 1rem;
   box-sizing: border-box;
 }
 
 .group div {
   margin-bottom: 3vh;
+}
+
+.image {
+  width: 25vw;
 }
 
 .contect {
@@ -94,7 +98,7 @@
 .container {
   margin: 1%;
   padding: 1%;
-  width: 90vw;
+  width: 70vw;
   max-width: 800px;
   align-self: center;
 }

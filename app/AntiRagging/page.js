@@ -74,7 +74,7 @@ const MembersTable = ({ data, identifier }) => {
 
     );
 }
-export default async function aboutus() {
+export default async function antiragging() {
     const data = await featch();
     console.log(data, "gotta");
     // console.log(data, "heimana")
@@ -132,4 +132,4 @@ export default async function aboutus() {
         </>
     );
 }
-export { aboutus };
+export { antiragging };

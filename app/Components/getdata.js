@@ -389,7 +389,26 @@ async function getStaticProps() {
       ],
       "ImageLink": "null"
 
-    }]
+    },
+    {
+      "_id": {
+        "$oid": "4b859ewefwefewfd7"
+      },
+      "page": "ec",
+      "Title": "Electronics & Communication Engineering",
+      "list": [
+        "Intake of 27 students.",
+        "Well-equipped laboratories like Power electronics & PLC, Advanced Microprocessors, VLSI, Analog Electronic Circuits, Digital Electronics, Microcontrollers, Basic Electronics Lab etc.",
+        "CAD lab with latest software.",
+        "Free Internet facility for all students (with Digital Library facility).",
+        "Students encouraged & supported to conduct Regular projects which improve their innovative & practical skills.",
+        "Regular Industrial visits and Internships for practical exposure.",
+        "Innovation Centre/Tinkering Lab facility."
+      ],
+      "ImageLink": "null"
+
+    }
+  ]
     const json = documents.reduce((acc, item) => {
       if (item.page) {
         // Ensure the field exists unique key
