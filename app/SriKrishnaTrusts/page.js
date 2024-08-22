@@ -114,7 +114,7 @@ export default async function aboutus() {
                                 <TrustMembersTable data={data} identifier="MECFaculties" />
                             </div>
                         </div>
-                    </div>   
+                    </div>
                     <div className={styles.group}>
                         <div className={styles.FacultyTitle}>{data.FacultyTitle.title}</div>
                         <div className={styles.container}>
