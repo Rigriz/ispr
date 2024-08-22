@@ -110,11 +110,11 @@ export default async function aboutus() {
                     <div className={styles.group}>
                         <div className={styles.FacultyTitle}>{data.FacultyTitle.MECTitle}</div>
                         <div className={styles.container}>
-                            <div className={styles.table} >
+                            <div className={styles.table}>
                                 <TrustMembersTable data={data} identifier="MECFaculties" />
                             </div>
                         </div>
-                    </div>
+                    </div>   
                     <div className={styles.group}>
                         <div className={styles.FacultyTitle}>{data.FacultyTitle.title}</div>
                         <div className={styles.container}>

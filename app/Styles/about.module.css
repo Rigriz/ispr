@@ -88,10 +88,14 @@
     /* Adjust gap between paragraphs on smaller screens */
   }
 
+  .imageContainer {
+    width: 90vw;
+  }
+
   .image {
     min-width: 88vw;
-    width: 52vw;
-    height: 74vh;
+    width: 44vw;
+    height: 50vh;
   }
 
   .paragraph {
