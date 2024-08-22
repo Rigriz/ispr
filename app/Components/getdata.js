@@ -414,7 +414,7 @@ async function getStaticProps() {
       "page": "Facilities",
       "Title": "Facilities",
       "Title2": "Placement Cell:",
-      "Descrition": "Placement cell help students know about the industry they are getting into. The main aim of a placement cell – getting students placed in good companies, where they can start their careers.",
+      "Description": "Placement cell help students know about the industry they are getting into. The main aim of a placement cell – getting students placed in good companies, where they can start their careers.",
       "heading": "New Campus:",
       "NewCampusDescription": "In view of extending the vision of our President (Sri Sri Vidyasagara Theertha Swamiji) to provide quality technical education to the financially backward but meritorious students of the udupi district and to fulfill all the infrastructure related norms of AICTE, New Delhi, and the academic year 2019-20 has commenced from 01-07-2019 with state of art class rooms, Lab and workshop facilities. We have now shifted to the present 10.75 acre spacious new campus behind “Rajathadri”, (New D.C. Office), at Manipal on the Sheembra Ganapathi Temple Road, Perampally, Udupi.",
       "heading2": "Library",

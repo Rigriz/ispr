@@ -39,41 +39,69 @@ export default async function cse() {
     return (
         <>
             <section className={styles.section}>
-                <div className={styles.Content}>
-                    <h1 className={styles.headline}>{data.Title}</h1>
-                    <h1 className={styles.headline}>{data.Title2}</h1>
-                    <p>{data.description}</p>
-                    <h4 className={styles.heading}>{data.heading}</h4>
-                    <description>{data.NewCampusDescription}</description>
-                    <div className={styles.image}>
-                        <img src="" alt="image of dept" />
+                <div className={styles.groups}>
+                    <div className={styles.Content}>
+                        <h1 className={styles.headline}>{data.Title}</h1>
+                        <div className={styles.group}>
+                            <h1 className={styles.headline}>{data.Title2}</h1>
+                            <p className={styles.description}>{data.Description}</p>
+                        </div>
                     </div>
-                    <h4 className={styles.heading}>{data.heading2}</h4>
-                    <Listsetter className={styles.li} data={data} list={'LibraryList'} />
-                    <p>{data.LibraryListFooter}</p>
-                    <h4 className={styles.heading}>{data.heading3}</h4>
-                    <p className={styles.description}>{data.heading3desc}</p>
-                    <h4 className={styles.heading}>{data.heading4}</h4>
-                    <p className={styles.description}>{data.heading4desc}</p>
-                    <h4 className={styles.heading}>{data.heading5}</h4>
-                    <h4 className={styles.heading}>{data.heading4Footer}</h4>
-                    <p className={styles.description}>{data.heading5desc}</p>
-                    <h4 className={styles.heading}>{data.heading6}</h4>
-                    <p className={styles.description}>{data.heading6desc}</p>
-                    <h4 className={styles.heading}>{data.heading7}</h4>
-                    <p className={styles.description}>{data.heading7desc}</p>
-                    <h4 className={styles.heading}>{data.heading8}</h4>
-                    <p className={styles.description}>{data.heading8desc}</p>
-                    <p className={styles.description}>{data.heading8desc2}</p>
-                    <h4 className={styles.heading}>{data.heading9}</h4>
-                    <p className={styles.description}>{data.heading9desc}</p>
-                    <p className={styles.description}>{data.heading8desc}</p>
-                    <h4 className={styles.heading}>{data.heading9}</h4>
-                    <p className={styles.description}>{data.heading9desc}</p>
-                    <h4 className={styles.heading}>{data.heading10}</h4>
-                    <p className={styles.description}>{data.heading10desc}</p>
-                    <h4 className={styles.heading}>{data.heading11}</h4>
-                    <p className={styles.description}>{data.heading11desc}</p>
+                    <div className={styles.group}>
+                        <h4 className={styles.heading}>{data.heading}</h4>
+                        <div className={styles.image}>
+                            <img src="" alt="image of dept" />
+                        </div>
+                        <p className={styles.description}>{data.NewCampusDescription}</p>
+                    </div>
+                    <div className={styles.group}>
+                        <h4 className={styles.heading}>{data.heading2}</h4>
+                        <Listsetter className={styles.li} data={data} list={'LibraryList'} />
+                        <p className={styles.description}>{data.LibraryListFooter}</p>
+                    </div>
+                    <div className={styles.group}>
+                        <h4 className={styles.heading}>{data.heading3}</h4>
+                        <p className={styles.description}>{data.heading3desc}</p>
+                    </div>
+                    <div className={styles.group}>
+                        <h4 className={styles.heading}>{data.heading4}</h4>
+                        <p className={styles.description}>{data.heading4desc}</p>
+                    </div>
+                    <div className={styles.group}>
+                        <h4 className={styles.heading}>{data.heading5}</h4>
+                        <h4 className={styles.heading}>{data.heading4Footer}</h4>
+                        <p className={styles.description}>{data.heading5desc}</p>
+                    </div>
+                    <div className={styles.group}>
+                        <h4 className={styles.heading}>{data.heading6}</h4>
+                        <p className={styles.description}>{data.heading6desc}</p>
+                    </div>
+                    <div className={styles.group}>
+                        <h4 className={styles.heading}>{data.heading7}</h4>
+                        <p className={styles.description}>{data.heading7desc}</p>
+                    </div>
+                    <div className={styles.group}>
+                        <h4 className={styles.heading}>{data.heading8}</h4>
+                        <p className={styles.description}>{data.heading8desc}</p>
+                        <p className={styles.description}>{data.heading8desc2}</p>
+                    </div>
+                    <div className={styles.group}>
+                        <h4 className={styles.heading}>{data.heading9}</h4>
+                        <p className={styles.description}>{data.heading9desc}</p>
+                        <p className={styles.description}>{data.heading8desc}</p>
+                    </div>
+                    <div className={styles.group}>
+                        <h4 className={styles.heading}>{data.heading9}</h4>
+                        <p className={styles.description}>{data.heading9desc}</p>
+                    </div>
+                    <div className={styles.group}>
+                        <h4 className={styles.heading}>{data.heading10}</h4>
+                        <p className={styles.description}>{data.heading10desc}</p>
+                    </div>
+                    <div className={styles.group}>
+                        <h4 className={styles.heading}>{data.heading11}</h4>
+                        <p className={styles.description}>{data.heading11desc}</p>
+                    </div>
                     <div className={styles.group}>
                         <div className={styles.container}>
                         </div>

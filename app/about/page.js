@@ -1,4 +1,3 @@
-'use client'
 import getStaticProps from "@/app/components/getdata";
 import DOMPurify from "isomorphic-dompurify";
 import styles from "@/app/Styles/about.module.css";
