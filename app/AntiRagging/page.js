@@ -75,7 +75,7 @@ const MembersTable = ({ data, identifier }) => {
 }
 export default async function antiragging() {
     const data = await featch();
-    console.log(data, "gotta");
+   // console.log(data, "gotta");
     // console.log(data, "heimana")
     return (
         <>
