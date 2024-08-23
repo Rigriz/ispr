@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link";
-import Shtyles from "../Styles/Navbar.module.css";
+import Shtyles from "@/app/Styles/Navbar.module.css";
 function Navbar() {
   return (
     <>
