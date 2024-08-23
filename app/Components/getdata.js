@@ -1,8 +1,7 @@
 //import { MongoClient } from "mongodb";
 //import "dotenv/config";
 export default async function getStaticProps() {
-  try {
-/* const client = new MongoClient(process.env.MONGODB_URI);
+  try { const client = new MongoClient(process.env.MONGODB_URI);
 await client.connect();
 console.log("Connected successfully to MongoDB");
 const db = client.db(process.env.DB_NAME);
@@ -23,7 +22,7 @@ const json = documents.reduce((acc, item) => {
     acc[item.page] = item;
   }
    return acc;
-}, {});/*
+}, {});
 // console.log(json, "Transformed JSON data");
  
 return {
