@@ -1,6 +1,5 @@
-import DOMPurify from "isomorphic-dompurify";
-import getStaticProps from "@/app/components/getdata";
-import styles from "@/app/Styles/SrikrishnaTrust.module.css";
+import getStaticProps from "../components/getdata";
+import styles from "../Styles/SrikrishnaTrust.module.css";
 async function featch() {
     try {
         const data = await getStaticProps();
