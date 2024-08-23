@@ -34,7 +34,7 @@ const Listsetter = ({ data, list }) => {
 }
 export default async function cse() {
     const data = await featch();
-    console.log(data, "gotta");
+   // console.log(data, "gotta");
     // console.log(data, "heimana")
     return (
         <>
