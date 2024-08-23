@@ -1,4 +1,4 @@
-import getStaticProps from "../../components/getdata";
+import getStaticProps from "@/app/Components/getdata";
 import styles from "../../Styles/dept.module.css";
 async function featch() {
     try {

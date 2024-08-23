@@ -1,5 +1,5 @@
 import DOMPurify from "isomorphic-dompurify";
-import getStaticProps from "../../components/getdata";
+import getStaticProps from "@/app/Components/getdata";
 import styles from "@/app/Styles/antiragging.module.css";
 async function featch() {
     try {
