@@ -1,6 +1,6 @@
 import getStaticProps from "@/app/components/getdata";
 import DOMPurify from "isomorphic-dompurify";
-import styles from "../Styles/about.module.css";
+import styles from '../Styles/about.module.css';
 async function featch() {
   try {
     const data = await getStaticProps();

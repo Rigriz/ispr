@@ -1,6 +1,6 @@
 
 import DOMPurify from "isomorphic-dompurify";
-import getStaticProps from "../components/getdata";
+import getStaticProps from '../components/getdata';
 import styles from "../Styles/main.module.css";
 import Link from "next/link";
 async function featch() {
