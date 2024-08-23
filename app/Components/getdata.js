@@ -1,4 +1,4 @@
-//import { MongoClient } from "mongodb";
+import { MongoClient } from "mongodb";
 //import "dotenv/config";
 async function getStaticProps() {
   try {
@@ -13,8 +13,7 @@ async function getStaticProps() {
     const documents = await cursor.toArray();
     // console.log(documents, "Fetched documents from MongoDB");
    // const jsonData = documents.map((doc) => JSON.stringify(doc));
-    const json = JSON.parse(JSON.stringify(documents));
-    //console.log(json, "Transformed JSON data");
+  //  const json = JSON.parse(JSON.stringify(documents));
     await client.close();
     // Transform array into an object with unique field as keys
 
@@ -23,8 +22,10 @@ async function getStaticProps() {
         // Ensure the field exists unique key
         acc[item.page] = item;
       }
-      return acc;
+       return acc;
     }, {});
+   // console.log(json, "Transformed JSON data");
+     
     return {
       props: {
         webContent: json, //sending the { json data }
