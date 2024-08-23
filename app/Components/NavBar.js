@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link";
-import Shtyles from "@/app/Styles/Navbar.module.css";
+import Shtyles from "../Styles/Navbar.module.css";
 function Navbar() {
   return (
     <>
@@ -47,7 +47,7 @@ function Navbar() {
             </ul>
           </li>
           <li className={`${Shtyles.navLi}  ${Shtyles.dropdownBtn}`}>
-            <Link href="/pages/departments">
+            <Link href="/pages/departments/cse/">
               <span className={Shtyles.a}>Department</span>
             </Link>
             <ul className={Shtyles.dropContent}>
@@ -86,7 +86,7 @@ function Navbar() {
             </Link>
           </li>
           <li className={Shtyles.navLi}>
-            <Link href="./pages/Admission">
+            <Link href="./Pages/Admission">
               <span className={Shtyles.a}>Admission</span>
             </Link>
           </li>

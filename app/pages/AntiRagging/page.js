@@ -1,19 +1,17 @@
-import styles from '@/app/Styles/antiragging.module.css';
-import featchData from "../api/fetchdata";
-
+import DOMPurify from "isomorphic-dompurify";
+import getStaticProps from "@/app/components/getdata";
+import styles from "@/app/Styles/antiragging.module.css";
 async function featch() {
     try {
-        const data = await featchData("AntiRagging");
-        console.log(data);
-        return data.props.webContent; //Return the homepage content on success
+        const data = await getStaticProps();
+        //console.log(data);
+        return data.props.webContent.AntiRagging; //Return the homepage content on success
     } catch (error) {
         console.error(
             "Error retrieving data from MongoDB getDataFromMongo:",
             error,
         );
-        return {
-            error: error.message
-        }; // Return an error object on failure
+        return { error: error.message }; // Return an error object on failure
     }
 }
 const Listsetter = ({ data, list }) => {
@@ -78,7 +76,7 @@ const MembersTable = ({ data, identifier }) => {
 }
 export default async function antiragging() {
     const data = await featch();
-   // console.log(data, "gotta");
+    console.log(data, "gotta");
     // console.log(data, "heimana")
     return (
         <>

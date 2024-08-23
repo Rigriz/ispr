@@ -1,26 +1,21 @@
 import DOMPurify from "isomorphic-dompurify";
+import getStaticProps from "@/app/components/getdata";
 import styles from "@/app/Styles/main.module.css";
 import Link from "next/link";
-import featchData from "../api/fetchdata";
-
 async function featch() {
-    try {
-        const data = await featchData("Home");
-        console.log(data);
-        return data.props.webContent; //Return the homepage content on success
-    } catch (error) {
-        console.error(
-            "Error retrieving data from MongoDB getDataFromMongo:",
-            error,
-        );
-        return {
-            error: error.message
-        }; // Return an error object on failure
-    }
+  try {
+    const data = await getStaticProps();
+    return data.props.webContent.Home; //Return the homepage content on success
+  } catch (error) {
+    console.error(
+      "Error retrieving data from MongoDB getDataFromMongo:",
+      error,
+    );
+    return { error: error.message }; // Return an error object on failure
+  }
 }
 async function MainPage() {
   const data = await featch();
-  console.log(data.page, "gotta");
   console.log(data.page, "gotta");
   //console.log(data, "heimana");
   return (
@@ -180,7 +175,7 @@ async function MainPage() {
                     href={"/AntiRagging"}
                     className={styles.Link}
                   >
-                    Click here
+                   Click here
                   </Link>
                 </span>
               </div>

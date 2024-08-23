@@ -1,5 +1,6 @@
 import styles from "@/app/Styles/page.module.css";
 import style from "@/app/Styles/home.module.css";
+import { cse } from "@/app/pages/departments/Cse";
 import Link from "next/link";
 
 export default async function Home() {
@@ -8,7 +9,7 @@ export default async function Home() {
             <div className={style.imagecontainer}>
                 <img className={style.image} src="./needed/main.png" alt="College Picture" />
             </div>
-            
+            <cse />
         </main>
     );
 }
