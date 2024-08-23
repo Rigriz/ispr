@@ -1,10 +1,10 @@
 import { Inter } from "next/font/google";
 import "./Styles/globals.css";
-import styles from "@/app/components/NavBar";
+import styles from "@/app/Styles/main.module.css";
 import Navbar from "@/app/components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
-
+s
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
