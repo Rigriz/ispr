@@ -23,7 +23,7 @@ const json = documents.reduce((acc, item) => {
   }
    return acc;
 }, {});
-// console.log(json, "Transformed JSON data");
+ console.log(json, "Transformed JSON data");
  
 return {
   props: {
