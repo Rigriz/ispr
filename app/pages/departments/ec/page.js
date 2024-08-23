@@ -1,24 +1,19 @@
 import DOMPurify from "isomorphic-dompurify";
-import getStaticProps from "@/app/Components/getdata";
+import getStaticProps from "@/app/components/getdata";
 import styles from "@/app/Styles/antiragging.module.css";
-import featchData from "../../api/fetchdata";
-
 async function featch() {
     try {
-        const data = await featchData("ec");
-        console.log(data);
-        return data.props.webContent; //Return the homepage content on success
+        const data = await getStaticProps();
+        //console.log(data);
+        return data.props.webContent.ec; //Return the homepage content on success
     } catch (error) {
         console.error(
             "Error retrieving data from MongoDB getDataFromMongo:",
             error,
         );
-        return {
-            error: error.message
-        }; // Return an error object on failure
+        return { error: error.message }; // Return an error object on failure
     }
 }
-
 const Listsetter = ({ data, list }) => {
     const id = [list];
     //console.log(data?.[id]);
