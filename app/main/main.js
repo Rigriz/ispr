@@ -17,11 +17,8 @@ async function featch() {
 }
 async function MainPage() {
   const data = await featch();
-<<<<<<< HEAD:app/pages/main.js
-  //console.log(data.page,"gotta");
-=======
   console.log(data.page, "gotta");
->>>>>>> development:app/main/main.js
+  console.log(data.page, "gotta");
   //console.log(data, "heimana");
   return (
     <>
@@ -180,7 +177,7 @@ async function MainPage() {
                     href={"/AntiRagging"}
                     className={styles.Link}
                   >
-                   Click here
+                    Click here
                   </Link>
                 </span>
               </div>
