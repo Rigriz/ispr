@@ -1,4 +1,4 @@
-import getStaticProps from "@/app/components/getdata";
+import getStaticProps from "../Components/getdata";
 import DOMPurify from "isomorphic-dompurify";
 import styles from '../Styles/about.module.css';
 async function featch() {

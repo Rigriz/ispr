@@ -1,5 +1,5 @@
 
-import getStaticProps from "../../components/getdata";
+import getStaticProps from "@/app/Components/getdata";
 import styles from "@/app/Styles/SrikrishnaTrust.module.css";
 async function featch() {
     try {
