@@ -1,6 +1,6 @@
 import styles from "./Styles/page.module.css";
 import style from "./Styles/home.module.css";
-import { MainPage } from "./main/main";
+import { MainPage } from "./pages/main/main";
 import Link from "next/link";
 
 export default async function Home() {

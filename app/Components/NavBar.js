@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link";
-import Shtyles from "../Styles/Navbar.module.css";
+import Shtyles from "@/app/Styles/Navbar.module.css";
 function Navbar() {
   return (
     <>
@@ -26,19 +26,19 @@ function Navbar() {
             </Link>
           </li>
           <li className={`${Shtyles.navLi}  ${Shtyles.dropdownBtn}`}>
-            <Link href="/about">
+            <Link href="/pages/about">
               <span className={Shtyles.a}>About-Us</span>
             </Link>
             <ul className={Shtyles.dropContent}>
               <li>
-                <Link href="/about">
+                <Link href="/pages/about">
                   <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Principel Desk
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/about/SriKrishnaTrust">
+                <Link href="/pages/about/SriKrishnaTrust">
                   <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Sri-Krishna-Shikshana-Prathisthana-Trust
                   </span>
@@ -47,32 +47,32 @@ function Navbar() {
             </ul>
           </li>
           <li className={`${Shtyles.navLi}  ${Shtyles.dropdownBtn}`}>
-            <Link href="/departments">
+            <Link href="/pages/departments">
               <span className={Shtyles.a}>Department</span>
             </Link>
             <ul className={Shtyles.dropContent}>
               <li>
-                <Link href="/departments/Cse">
+                <Link href="/pages/departments/Cse">
                   <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Computer Science Engineering
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/departments/ec">
+                <Link href="/pages/departments/ec">
                   <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Electronics & Communication Engineering
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/departments/mec">
+                <Link href="/pages/departments/mec">
                   <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Mechanical Engineering</span>
                 </Link>
               </li>
               <li>
-                <Link href="/departments/adft">
+                <Link href="/pages/departments/adft">
                   <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Apparel Design & Fabrication Technology
                   </span>
@@ -81,17 +81,17 @@ function Navbar() {
             </ul>
           </li>
           <li className={Shtyles.navLi}>
-            <Link href="/facilities">
+            <Link href="/pages/facilities">
               <span className={Shtyles.a}>Facilities</span>
             </Link>
           </li>
           <li className={Shtyles.navLi}>
-            <Link href="./Pages/Admission">
+            <Link href="./pages/Admission">
               <span className={Shtyles.a}>Admission</span>
             </Link>
           </li>
           <li className={Shtyles.navLi}>
-            <Link href="./Pages/Photo-Gallery">
+            <Link href="./pages/Photo-Gallery">
               <span className={Shtyles.a}>Photo Gallery</span>
             </Link>
           </li>
