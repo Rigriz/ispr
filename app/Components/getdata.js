@@ -1,6 +1,6 @@
 import { MongoClient } from "mongodb";
 //import "dotenv/config";
-async function getStaticProps() {
+export default async function getStaticProps() {
   try {
     const client = new MongoClient(process.env.MONGODB_URI);
     await client.connect();
@@ -39,4 +39,3 @@ async function getStaticProps() {
     };
   }
 }
-export default getStaticProps;
