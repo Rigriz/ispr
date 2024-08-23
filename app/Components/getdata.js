@@ -1,4 +1,4 @@
-//import { MongoClient } from "mongodb";
+import { MongoClient } from "mongodb";
 //import "dotenv/config";
 export default async function getStaticProps() {
   try { const client = new MongoClient(process.env.MONGODB_URI);
