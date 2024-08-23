@@ -1,4 +1,3 @@
-'use client'
 import Link from "next/link";
 import Shtyles from "@/app/Styles/Navbar.module.css";
 function Navbar() {
