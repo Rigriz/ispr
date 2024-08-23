@@ -1,4 +1,3 @@
-import DOMPurify from "isomorphic-dompurify";
 import getStaticProps from "@/app/components/getdata";
 import styles from "@/app/Styles/antiragging.module.css";
 async function featch() {
