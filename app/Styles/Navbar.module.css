@@ -3,6 +3,7 @@
   flex-direction: row;
   width: 100%;
   align-items: flex-start;
+  margin-bottom: 4vh;
 }
 
 .headercontainer {
@@ -17,12 +18,14 @@
   align-items: flex-start;
   margin-bottom: 0px;
 }
+
 .image {
   margin: 0px 0px 0px 0px;
-  width: 14vw;
+  width: 10vw;
   max-width: 142px;
   height: auto;
 }
+
 .headerTitle {
   padding: 1%;
   margin-right: 0px;
@@ -32,7 +35,7 @@
 }
 
 .headerTitle .headerBrand {
-  font-size: 3vw;
+  font-size: 2.5vw;
   margin: 0px 0px 7px 0px;
   white-space: nowrap;
   text-decoration: none;
@@ -46,33 +49,36 @@
 
 @media (max-width: 768px) {
   .image {
-    width: 15vw;
+    width: 9vw;
   }
 
   .headerTitle .headerBrand {
-    font-size: 4vw;
+    font-size: 2vw;
   }
 }
 
 @media (max-width: 480px) {
   .image {
-    width: 14vw;
+    width: 10vw;
   }
 
   .headerTitle .headerBrand {
-    font-size: 5vw;
+    font-size: 2.5vw;
   }
 
   .headerTitle .p {
     font-size: 14px;
   }
-  .nav .navul { 
+
+  .nav .navul {
     justify-content: flex-end;
     padding-left: 35vw
   }
+
   .navLi {
     font-size: 2vw;
   }
+
   .navul .navLi .a {
     font-size: 2.5vw;
   }
@@ -93,20 +99,20 @@
 
 .navLi {
   width: fit-content;
-  /* make li take full width */
   text-align: center;
+  border-radius: 0.162rem;
   background-color: #4195f0;
-  padding: 0%;
+  padding: 1vh 1vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-right: 2%;
 }
 
-.nav .a {
+ .a  {
   font-size: 2vw;
+  padding: 1px;
   display: block;
-  /* make a tag a block element to take full width */
   white-space: nowrap;
   /* prevent text wrapping */
   overflow: hidden;
@@ -115,12 +121,12 @@
   /* add ellipsis if text is too long */
   color: #fff;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 2px 5px rgba(211, 204, 204, 0.031);
 }
-
 .nav .a:hover {
   color: black;
-  background-color: white;
+  background-color: rgba(239, 239, 239, 0.973);
 }
 
 .dropdownBtn {
@@ -134,25 +140,42 @@
   list-style-type: none;
   background-color: rgb(65, 149, 240);
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  border-radius: 3%;
   width: auto;
-  display: none;
+  display:none;
+  border-radius: 0.172rem;
 }
-
-.dropContent .a {
+.dropContent li {
   text-align: left;
+  margin: 1vh 1wh;
+}
+.dropContent .dropa{
   display: block;
-  padding: 1%;
-  color: #ffffff;
-  background-color: rgb(69, 133, 255);
+  text-align: left;
+  margin: 1%;
+  padding: 2%;
+
+  font-size: 2vw;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
   text-decoration: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 2px 5px rgba(211, 204, 204, 0.031);
 }
 
 .dropdownBtn:hover .dropContent {
   display: block;
+  .dropa :hover {
+    background-color: #57ffc1d4;
+    color: aqua;
+    font-size: 12%;
+  }
 }
+
+
 
 /*
 .dropContent li {
@@ -176,9 +199,6 @@
   display: block;
 }
 
-.dropContent li a:hover {
-  background-color: #ddd;
-}
 
 .nav .a {
   color: #fff;

@@ -1,5 +1,6 @@
+
 import DOMPurify from "isomorphic-dompurify";
-import getStaticProps from "./getdata";
+import getStaticProps from "../components/getdata";
 import styles from "../Styles/main.module.css";
 import Link from "next/link";
 async function featch() {
@@ -16,7 +17,11 @@ async function featch() {
 }
 async function MainPage() {
   const data = await featch();
+<<<<<<< HEAD:app/pages/main.js
   //console.log(data.page,"gotta");
+=======
+  console.log(data.page, "gotta");
+>>>>>>> development:app/main/main.js
   //console.log(data, "heimana");
   return (
     <>
@@ -67,7 +72,7 @@ async function MainPage() {
                     __html: DOMPurify.sanitize(data.GrievanceTitle),
                   }}
                 />{" "}
-                <a href={data.GrievanceLink}>CLICK HERE</a>
+                <a className={styles.Link} href={data.GrievanceLink}>CLICK HERE</a>
               </div>
               <div className={styles.disclosure}>
                 <p
@@ -75,7 +80,7 @@ async function MainPage() {
                     __html: DOMPurify.sanitize(data.MandatoryTitle),
                   }}
                 />{" "}
-                <a href={data.MandatoryLink}>CLICK HERE</a>
+                <a className={styles.Link} href={data.MandatoryLink}>CLICK HERE</a>
               </div>
             </div>
           </div>
@@ -169,7 +174,14 @@ async function MainPage() {
                   alt="Ragging-logo"
                 />
                 <span className={styles.Ragginglink}>
-                  For Anti-Ragging Committee list click here
+                  For Anti-Ragging Committee list &nbsp;
+                  <Link
+                    key={"AntiRagging"}
+                    href={"/AntiRagging"}
+                    className={styles.Link}
+                  >
+                   Click here
+                  </Link>
                 </span>
               </div>
             </div>

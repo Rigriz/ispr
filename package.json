@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "dotenv": "^16.4.5",
+=======
+>>>>>>> development
     "dompurify": "^3.1.6",
     "isomorphic-dompurify": "^2.14.0",
     "mongodb": "^6.8.0",

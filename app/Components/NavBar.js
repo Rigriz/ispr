@@ -1,7 +1,7 @@
+'use client'
 import Link from "next/link";
 import Shtyles from "../Styles/Navbar.module.css";
-
-const Navbar = () => {
+function Navbar() {
   return (
     <>
       <div className={Shtyles.header}>
@@ -21,42 +21,59 @@ const Navbar = () => {
       <nav className={Shtyles.nav}>
         <ul className={Shtyles.navul}>
           <li className={Shtyles.navLi}>
-            <Link href="#">
+            <Link href="/">
               <span className={Shtyles.a}>Home</span>
             </Link>
           </li>
-          <li className={Shtyles.navLi}>
-            <Link href="./Pages/About-us">
-              <span className={Shtyles.a}>About-us</span>
+          <li className={`${Shtyles.navLi}  ${Shtyles.dropdownBtn}`}>
+            <Link href="/about">
+              <span className={Shtyles.a}>About-Us</span>
             </Link>
+            <ul className={Shtyles.dropContent}>
+              <li>
+                <Link href="/about">
+                  <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
+                    Principel Desk
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/about/SriKrishnaTrust">
+                  <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
+                    Sri-Krishna-Shikshana-Prathisthana-Trust
+                  </span>
+                </Link>
+              </li>
+            </ul>
           </li>
           <li className={`${Shtyles.navLi}  ${Shtyles.dropdownBtn}`}>
-            <Link href="./Pages/About-us">
+            <Link href="/departments">
               <span className={Shtyles.a}>Department</span>
             </Link>
             <ul className={Shtyles.dropContent}>
               <li>
-                <Link href="./Pages/Computer-Science-Engineering">
-                  <span className={Shtyles.a}>
+                <Link href="/departments/Cse">
+                  <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Computer Science Engineering
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="./Pages/Electronics-Communication-Engineering">
-                  <span className={Shtyles.a}>
+                <Link href="/departments/ec">
+                  <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Electronics & Communication Engineering
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="./Pages/Mechanical-Engineering">
-                  <span className={Shtyles.a}>Mechanical Engineering</span>
+                <Link href="/departments/mec">
+                  <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
+                    Mechanical Engineering</span>
                 </Link>
               </li>
               <li>
-                <Link href="./Pages/Apparel-Design-Fabrication-Technology">
-                  <span className={Shtyles.a}>
+                <Link href="/departments/adft">
+                  <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Apparel Design & Fabrication Technology
                   </span>
                 </Link>
@@ -64,7 +81,7 @@ const Navbar = () => {
             </ul>
           </li>
           <li className={Shtyles.navLi}>
-            <Link href="./Pages/Facilities">
+            <Link href="/facilities">
               <span className={Shtyles.a}>Facilities</span>
             </Link>
           </li>
@@ -84,7 +101,7 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-      </nav>
+      </nav >
     </>
   );
 };
