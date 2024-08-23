@@ -30,7 +30,7 @@ async function getStaticProps() {
       props: {
         webContent: json, //sending the { json data }
       },
-      revalidate: 55000, // revalidate every 400 second
+      revalidate: 600000, // revalidate every 400 second
     };
   } catch (err) {
     console.error("Error fetching data from MongoDB", err);
