@@ -328,10 +328,10 @@ async function getStaticProps() {
         { "NameoftheFaculty": "H.K.VISHWANATHA RAO", "Designation": "RETIRED PROFESSOR", "Position": "Member", "MobileNumber": "9480655406", "E-mailAddress": "hkvrao44@gmail.com" }],
       "heading4": "The list of Members of Anti- Ragging Squad constituted in the college is as below:",
       "SquadMembers": [
-        { NameoftheFaculty: "SRINATH", "Designation": "PRINCIPAL", "Position": "Co-Ordinator", "MobileNumber": "9743293148", "E-mailAddress": "srinathnyk@gmail.com" },
-        { NameoftheFaculty: "Mrs. SHWETHA P", "Designation": "Lecturer in CS", "Position": "Member", "MobileNumber": "9901190935", "E-mailAddress": "shwethap1305@gmail.com" },
-        { NameoftheFaculty: "Mrs. REKHA", "Designation": "OFFICE CLERK", "Position": "Member", "MobileNumber": "9449470293", "E-mailAddress": "rekhahegde110@gmail.com" },
-        { NameoftheFaculty: "Mrs. SONAL FERNANDES", "Designation": "H.O.D in CS", "Position": "Member", "MobileNumber": "7259838788", "E-mailAddress": "Sonalf26@gmail.com" }],
+        { "NameoftheFaculty": "SRINATH", "Designation": "PRINCIPAL", "Position": "Co-Ordinator", "MobileNumber": "9743293148", "E-mailAddress": "srinathnyk@gmail.com" },
+        { "NameoftheFaculty": "Mrs. SHWETHA P", "Designation": "Lecturer in CS", "Position": "Member", "MobileNumber": "9901190935", "E-mailAddress": "shwethap1305@gmail.com" },
+        { "NameoftheFaculty": "Mrs. REKHA", "Designation": "OFFICE CLERK", "Position": "Member", "MobileNumber": "9449470293", "E-mailAddress": "rekhahegde110@gmail.com" },
+        { "NameoftheFaculty": "Mrs. SONAL FERNANDES", "Designation": "H.O.D in CS", "Position": "Member", "MobileNumber": "7259838788", "E-mailAddress": "Sonalf26@gmail.com" }],
       "FooretTitle": "NOTE",
       "FooterDescription": "Students and Staff Members may contact any of the above mentioned Committee/Squad Members to communicate their feedback/complaints on the subject."
     },
