@@ -10,7 +10,7 @@ async function getStaticProps() {
       .collection(process.env.WEB_CONTENT)
       .find({}, { projection: { _id: 0 } });
 
-    //const documents = await cursor.toArray();
+    const documents = await cursor.toArray();
     // console.log(documents, "Fetched documents from MongoDB");
     /*const jsonData = documents.map((doc) => JSON.stringify(doc));
     const json = JSON.parse(JSON.stringify(documents));*/
