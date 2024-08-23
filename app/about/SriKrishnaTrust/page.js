@@ -5,7 +5,7 @@ async function featch() {
     try {
         const data = await getStaticProps();
         //console.log(data);
-        const onetent = data.props.webContent.SriKrishnaShikshanaPrathisthanaTrust; //Return the homepage content on success
+        const onetent = data.props.webContent.SriKrishnaShikshanaPrathisthanaTrustGoverningCouncilandFacultyDetails; //Return the homepage content on success
         return onetent;
     } catch (error) {
         console.error(
