@@ -1,4 +1,3 @@
-import getStaticProps from "@/app/Components/getdata";
 import DOMPurify from "isomorphic-dompurify";
 import styles from "@/app/Styles/about.module.css";
 import featchData from "../api/fetchdata";

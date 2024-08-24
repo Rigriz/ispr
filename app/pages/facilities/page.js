@@ -1,4 +1,3 @@
-import DOMPurify from "isomorphic-dompurify";
 import styles from "@/app/Styles/facilities.module.css";
 import featchData from "../api/fetchdata";
 

@@ -1,4 +1,3 @@
-
 import DOMPurify from "isomorphic-dompurify";
 import styles from "@/app/Styles/main.module.css";
 import Link from "next/link";

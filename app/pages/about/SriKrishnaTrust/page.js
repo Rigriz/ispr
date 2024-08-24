@@ -1,5 +1,3 @@
-
-import getStaticProps from "@/app/Components/getdata";
 import styles from "@/app/Styles/SrikrishnaTrust.module.css";
 import featchData from "@/app/pages/api/fetchdata";
 

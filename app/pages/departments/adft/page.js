@@ -1,4 +1,3 @@
-//import getStaticProps from "@/app/Components/getdata";
 import styles from "@/app/Styles/dept.module.css";
 import featchData from "../../api/fetchdata";
 

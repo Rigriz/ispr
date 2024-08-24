@@ -1,5 +1,3 @@
-import DOMPurify from "isomorphic-dompurify";
-import getStaticProps from "@/app/Components/getdata";
 import styles from "@/app/Styles/antiragging.module.css";
 import featchData from "../../api/fetchdata";
 
