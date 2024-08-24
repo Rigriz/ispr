@@ -1,11 +1,12 @@
-import DOMPurify from "isomorphic-dompurify";
-import getStaticProps from "@/app/components/getdata";
+
+import getStaticProps from "@/app/Components/getdata";
 import styles from "@/app/Styles/SrikrishnaTrust.module.css";
 async function featch() {
     try {
         const data = await getStaticProps();
         //console.log(data);
-        return data.props.webContent.SriKrishnaShikshanaPrathisthanaTrust; //Return the homepage content on success
+        const onetent = data.props.webContent.SriKrishnaShikshanaPrathisthanaTrustGoverningCouncilandFacultyDetails; //Return the homepage content on success
+        return onetent;
     } catch (error) {
         console.error(
             "Error retrieving data from MongoDB getDataFromMongo:",
@@ -15,9 +16,9 @@ async function featch() {
     }
 }
 const TrustMembersTable = ({ data, identifier }) => {
-    // console.log(data);
-    const id = [identifier]
-    console.log(data?.[id]);
+    //console.log(data);
+    // const id = [identifier]
+    // console.log(data?.[id]);
     let tableType = ["SL.No", "Name", "Designation"];;
     if (identifier === 'trustMembers' || identifier === 'GoverningMembers' || identifier === 'OfficeFaculties') {
         tableType = ["SL.No", "Name", "Designation"];
@@ -26,7 +27,7 @@ const TrustMembersTable = ({ data, identifier }) => {
     }
     //  console.log(tableType);
     return (
-        <table className={styles.tableMain}>
+        <table>
             <thead className={styles.th}>
                 <tr className={styles.tr} >
                     {tableType.map((header, index) => (
@@ -37,10 +38,10 @@ const TrustMembersTable = ({ data, identifier }) => {
             <tbody>
                 {data && data[identifier] ? (
                     data[identifier].map((item, index) => (
-                        console.log(`Item at index ${index}:`, item), //index is number 0 and item is single name and designation
+                        // console.log(`Item at index ${index}:`, item), //index is number 0 and item is single name and designation
                         <tr className={styles.tr} key={index}>
                             {tableType && tableType.map((header, headerIndex) => (
-                                console.log(`singleunit:${headerIndex}: and ${header}: accessing by headerofitem: ${item[header]}`),
+                                //  console.log(`singleunit:${headerIndex}: and ${header}: accessing by headerofitem: ${item[header]}`),
                                 <td className={styles.td} key={headerIndex}>
                                     {header === "SL.No" ? index + 1 : item[header]}
                                 </td>
@@ -59,11 +60,12 @@ const TrustMembersTable = ({ data, identifier }) => {
 export default async function aboutus() {
     const data = await featch();
     //console.log(data.trustMembers, "gotta");
-    console.log(data, "heimana")
+    //console.log(data, "heimana")
     return (
         <>
             <section className={styles.section}>
                 <div className={styles.content}>
+
                     <p className={styles.heading}>{data.page}</p>
                     <div className={styles.group}>
                         <div >
@@ -104,13 +106,13 @@ export default async function aboutus() {
                         <div className={styles.container}>
                             <div className={styles.table} >
                                 <TrustMembersTable data={data} identifier="ADFTFaculties" />
-                            </div>
+                            </div>/
                         </div>
                     </div>
                     <div className={styles.group}>
                         <div className={styles.FacultyTitle}>{data.FacultyTitle.MECTitle}</div>
                         <div className={styles.container}>
-                            <div className={styles.table}>
+                            <div className={styles.table} >
                                 <TrustMembersTable data={data} identifier="MECFaculties" />
                             </div>
                         </div>

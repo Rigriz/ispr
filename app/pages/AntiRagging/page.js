@@ -1,6 +1,5 @@
-import DOMPurify from "isomorphic-dompurify";
-import getStaticProps from "../components/getdata";
-import styles from "@/app/Styles/antiragging.module.css";
+import getStaticProps from '@/app/Components/getdata';
+import styles from '@/app/Styles/antiragging.module.css';
 async function featch() {
     try {
         const data = await getStaticProps();
@@ -76,7 +75,7 @@ const MembersTable = ({ data, identifier }) => {
 }
 export default async function antiragging() {
     const data = await featch();
-    console.log(data, "gotta");
+   // console.log(data, "gotta");
     // console.log(data, "heimana")
     return (
         <>

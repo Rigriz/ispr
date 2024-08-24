@@ -1,7 +1,7 @@
 
 import DOMPurify from "isomorphic-dompurify";
-import getStaticProps from "../components/getdata";
-import styles from "../Styles/main.module.css";
+import getStaticProps from '@/app/Components/getdata';
+import styles from "@/app/Styles/main.module.css";
 import Link from "next/link";
 async function featch() {
   try {
@@ -17,6 +17,7 @@ async function featch() {
 }
 async function MainPage() {
   const data = await featch();
+  console.log(data.page, "gotta");
   console.log(data.page, "gotta");
   //console.log(data, "heimana");
   return (
@@ -176,7 +177,7 @@ async function MainPage() {
                     href={"/AntiRagging"}
                     className={styles.Link}
                   >
-                   Click here
+                    Click here
                   </Link>
                 </span>
               </div>
