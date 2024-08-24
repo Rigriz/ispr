@@ -1,5 +1,5 @@
-import getStaticProps from "@/app/components/getdata";
 import styles from "@/app/Styles/antiragging.module.css";
+import featchData from "../api/fetchdata";
 async function featch() {
     try {
         const data = await getStaticProps();
