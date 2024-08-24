@@ -1,9 +1,20 @@
-import DOMPurify from "isomorphic-dompurify";
-import getStaticProps from "@/app/Components/getdata";
+//import getStaticProps from "@/app/Components/getdata";
 import styles from "@/app/Styles/dept.module.css";
+import featchData  from "../../api/fetchdata";
+//import { getServerSideProps } from 'next';
+/*
+export async function getServerSideProps() {
+    const webContent= await featchData();
+    return {
+        props: {
+            webContent,
+        },
+    };
+}
+*/
 async function featch() {
     try {
-        const data = await getStaticProps();
+        const data = await featchData("adft");
         //console.log(data);
         return data.props.webContent.adft; //Return the homepage content on success
     } catch (error) {
@@ -11,7 +22,8 @@ async function featch() {
             "Error retrieving data from MongoDB getDataFromMongo:",
             error,
         );
-        return { error: error.message }; // Return an error object on failure
+        return { error: error.message
+                        }; // Return an error object on failure
     }
 }
 const Listsetter = ({ data, list }) => {
