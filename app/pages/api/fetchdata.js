@@ -463,7 +463,7 @@ export default async function getStaticProps(request) {
             props: {
                 webContent: record, //sending the { json data }
             },
-            revalidate: 600000, // revalidate every 400 second
+            revalidate: 26000, // revalidate every 10 hours 
         };
     } catch (err) {
         console.error("Error fetching data from MongoDB", err);
