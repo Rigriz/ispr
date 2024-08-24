@@ -1,20 +1,24 @@
 
 import getStaticProps from "@/app/Components/getdata";
 import styles from "@/app/Styles/SrikrishnaTrust.module.css";
+import featchData from "@/app/pages/api/fetchdata";
+
 async function featch() {
     try {
-        const data = await getStaticProps();
-        //console.log(data);
-        const onetent = data.props.webContent.SriKrishnaShikshanaPrathisthanaTrustGoverningCouncilandFacultyDetails; //Return the homepage content on success
-        return onetent;
+        const data = await featchData("SriKrishnaShikshanaPrathisthanaTrustGoverningCouncilandFacultyDetails");
+        console.log(data);
+        return data.props.webContent; //Return the homepage content on success
     } catch (error) {
         console.error(
             "Error retrieving data from MongoDB getDataFromMongo:",
             error,
         );
-        return { error: error.message }; // Return an error object on failure
+        return {
+            error: error.message
+        }; // Return an error object on failure
     }
 }
+
 const TrustMembersTable = ({ data, identifier }) => {
     //console.log(data);
     // const id = [identifier]

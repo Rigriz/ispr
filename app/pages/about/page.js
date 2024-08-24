@@ -1,14 +1,22 @@
 import getStaticProps from "@/app/Components/getdata";
 import DOMPurify from "isomorphic-dompurify";
 import styles from "@/app/Styles/about.module.css";
+import featchData from "../api/fetchdata";
+
 async function featch() {
-  try {
-    const data = await getStaticProps();
-    return data.props.webContent.Aboutus;
-  } catch (error) {
-    console.error("Error retrieving data:", error);
-    return { error: error.message };
-  }
+    try {
+        const data = await featchData("Aboutus");
+        console.log(data);
+        return data.props.webContent; //Return the homepage content on success
+    } catch (error) {
+        console.error(
+            "Error retrieving data from MongoDB getDataFromMongo:",
+            error,
+        );
+        return {
+            error: error.message
+        }; // Return an error object on failure
+    }
 }
 export default async function about() {
   const data = await featch();
