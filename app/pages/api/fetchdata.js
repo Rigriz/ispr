@@ -1,4 +1,4 @@
-//import { MongoClient } from 'mongodb';
+import { MongoClient } from 'mongodb';
 
 export default async function getStaticProps(request) {
     try {
@@ -10,7 +10,7 @@ export default async function getStaticProps(request) {
         const documents = await cursor.toArray();
         await client.close();
         // Transform data into an object with page as the key
-        /*
+    /*
         const documents = [{
             "_id": {
               "$oid": "66a72a45305c1474d56b4288"
@@ -451,7 +451,7 @@ export default async function getStaticProps(request) {
             "heading11": "Professional Practices Lab:",
             "heading11desc": "Students are trained to give PPT presentations using the Projector, which improves their personality development, Communication skills etc. and sufficient guidance is also given which helps them to face interviews and perform well in the present competitive world with good written and oral communication skills.",
           }
-          ]   */
+          ]  */ 
         const json = documents.reduce((acc, item) => {
             if (item.page) { // Ensure the field exists for a unique key
                 acc[item.page] = item;
@@ -467,6 +467,5 @@ export default async function getStaticProps(request) {
         };
     } catch (err) {
         console.error("Error fetching data from MongoDB", err);
-        res.status(500).json({ error: 'Failed to fetch data' }); // Send error response
     }
 }
