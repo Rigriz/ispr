@@ -1,4 +1,4 @@
-import styles from "../../Styles/dept.module.css";
+import styles from "@/app/Styles/dept.module.css";
 import featchData from "../../api/fetchdata";
 
 async function featch() {
