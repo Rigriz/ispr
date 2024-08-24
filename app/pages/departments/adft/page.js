@@ -16,7 +16,7 @@ async function featch() {
     try {
         const data = await featchData("adft");
         //console.log(data);
-        return data.props.webContent.adft; //Return the homepage content on success
+        return data.props.webContent; //Return the homepage content on success
     } catch (error) {
         console.error(
             "Error retrieving data from MongoDB getDataFromMongo:",
