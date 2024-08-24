@@ -1,17 +1,29 @@
-import DOMPurify from "isomorphic-dompurify";
-import getStaticProps from "@/app/components/getdata";
+//import getStaticProps from "@/app/Components/getdata";
 import styles from "@/app/Styles/dept.module.css";
+import featchData  from "../../api/fetchdata";
+//import { getServerSideProps } from 'next';
+/*
+export async function getServerSideProps() {
+    const webContent= await featchData();
+    return {
+        props: {
+            webContent,
+        },
+    };
+}
+*/
 async function featch() {
     try {
-        const data = await getStaticProps();
-        //console.log(data);
-        return data.props.webContent.adft; //Return the homepage content on success
+        const data = await featchData("adft");
+        console.log(data);
+        return data.props.webContent; //Return the homepage content on success
     } catch (error) {
         console.error(
             "Error retrieving data from MongoDB getDataFromMongo:",
             error,
         );
-        return { error: error.message }; // Return an error object on failure
+        return { error: error.message
+                        }; // Return an error object on failure
     }
 }
 const Listsetter = ({ data, list }) => {
@@ -34,7 +46,7 @@ const Listsetter = ({ data, list }) => {
 }
 export default async function adft() {
     const data = await featch();
-    //console.log(data, "gotta");
+    console.log(data, "gotta");
     // console.log(data, "heimana")
     return (
         <>

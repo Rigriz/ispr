@@ -2,20 +2,20 @@ import { MongoClient } from "mongodb";
 //import "dotenv/config";
 export default async function getStaticProps() {
   try {
-    const client = new MongoClient(process.env.MONGODB_URI);
-    await client.connect();
-    console.log("Connected successfully to FMongoDB");
-    const db = client.db(process.env.DB_NAME);
-    const cursor = db.collection(process.env.WEB_CONTENT).find({}, { projection: { _id: 0 } });
+   // const client = new MongoClient(process.env.MONGODB_URI);
+   // await client.connect();
+   // console.log("Connected successfully to FMongoDB");
+   // const db = client.db(process.env.DB_NAME);
+   // const cursor = db.collection(process.env.WEB_CONTENT).find({}, { projection: { _id: 0 } });
     // console.log(cursor);
-    const documents = await cursor.toArray();
+  //  const documents = await cursor.toArray();
    //console.log(documents, "Fetched documents from MongoDB");
     /*const jsonData = documents.map((doc) => JSON.stringify(doc));
     const json = JSON.parse(JSON.stringify(documents));*/
     //console.log(json, "Transformed JSON data");
-    await client.close();
+    //await client.close();
     // Transform array into an object with unique field as keys
-    /*   const documents = [{
+     const documents = [{
          "_id": {
            "$oid": "66a72a45305c1474d56b4288"
          },
@@ -455,7 +455,7 @@ export default async function getStaticProps() {
          "heading11": "Professional Practices Lab:",
          "heading11desc": "Students are trained to give PPT presentations using the Projector, which improves their personality development, Communication skills etc. and sufficient guidance is also given which helps them to face interviews and perform well in the present competitive world with good written and oral communication skills.",
        }
-       ] */
+       ] 
    const json = documents.reduce((acc, item) => {
       if (item.page) {
         // Ensure the field exists unique key
