@@ -1,17 +1,6 @@
-//import getStaticProps from "@/app/Components/getdata";
 import styles from "@/app/Styles/dept.module.css";
-import featchData  from "../../api/fetchdata";
-//import { getServerSideProps } from 'next';
-/*
-export async function getServerSideProps() {
-    const webContent= await featchData();
-    return {
-        props: {
-            webContent,
-        },
-    };
-}
-*/
+import featchData from "../../api/fetchdata";
+
 async function featch() {
     try {
         const data = await featchData("adft");
@@ -22,10 +11,12 @@ async function featch() {
             "Error retrieving data from MongoDB getDataFromMongo:",
             error,
         );
-        return { error: error.message
-                        }; // Return an error object on failure
+        return {
+            error: error.message
+        }; // Return an error object on failure
     }
 }
+
 const Listsetter = ({ data, list }) => {
     const id = [list];
     //console.log(data?.[id]);

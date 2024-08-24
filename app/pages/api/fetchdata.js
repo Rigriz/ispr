@@ -1,36 +1,16 @@
 import { MongoClient } from 'mongodb';
 
-export default async function featchData(request) {
-
+export default async function getStaticProps(request) {
     try {
-<<<<<<< HEAD
-        const client = await MongoClient.connect(process.env.MONGODB_URI);
-=======
-      /*  const client = await MongoClient.connect(process.env.MONGODB_URI);
->>>>>>> a1e1fcdd6300edb8ebaee823f03a0ba1e7e8f819
-        
+        const client = await MongoClient.connect(process.env.MONGODB_URI); 
         const db = client.db(process.env.DB_NAME);
         const collection = db.collection(process.env.WEB_CONTENT);
-
-<<<<<<< HEAD
-         //Project only necessary fields (excluding _id)
-        const cursor = collection.find({}, { projection: { _id: 0 } });
-
-        const documents = await cursor.toArray();
-        await client.close();
-
-        // Transform data into an object with page as the key
-        /*
-=======
         // Project only necessary fields (excluding _id)
         const cursor = collection.find({}, { projection: { _id: 0 } });
-
-       // const documents = await cursor.toArray();
+        const documents = await cursor.toArray();
         await client.close();
-
         // Transform data into an object with page as the key
-        */
->>>>>>> a1e1fcdd6300edb8ebaee823f03a0ba1e7e8f819
+    /*
         const documents = [{
             "_id": {
               "$oid": "66a72a45305c1474d56b4288"
@@ -471,12 +451,8 @@ export default async function featchData(request) {
             "heading11": "Professional Practices Lab:",
             "heading11desc": "Students are trained to give PPT presentations using the Projector, which improves their personality development, Communication skills etc. and sufficient guidance is also given which helps them to face interviews and perform well in the present competitive world with good written and oral communication skills.",
           }
-<<<<<<< HEAD
-          ]  */
-=======
-          ] 
->>>>>>> a1e1fcdd6300edb8ebaee823f03a0ba1e7e8f819
-          const json = documents.reduce((acc, item) => {
+          ]  */ 
+        const json = documents.reduce((acc, item) => {
             if (item.page) { // Ensure the field exists for a unique key
                 acc[item.page] = item;
             }
@@ -485,12 +461,11 @@ export default async function featchData(request) {
         const record = json[request];
         return {
             props: {
-                webContent:record, //sending the { json data }
+                webContent: record, //sending the { json data }
             },
             revalidate: 600000, // revalidate every 400 second
         };
     } catch (err) {
         console.error("Error fetching data from MongoDB", err);
-        res.status(500).json({ error: 'Failed to fetch data' }); // Send error response
     }
 }
