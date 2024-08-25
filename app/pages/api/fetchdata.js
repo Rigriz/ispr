@@ -469,8 +469,9 @@ export default async function getStaticProps(request) {
       }
       return acc;
     }, {});
+
     const record = json[request];
-    console.log(json);
+     //console.log(record);
     return {
       props: {
         webContent: record, //sending the { json data }

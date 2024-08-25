@@ -77,6 +77,8 @@ facilities.section {
 .list {
   flex-direction: column;
   justify-self: start;
+    font-size: 2.2vh;
+    line-height: 5vh;
 }
 
 .container {
@@ -201,7 +203,7 @@ facilities.section {
 /* Small tablets and larger phones */
 @media (max-width: 768px) {
   .group {
-    padding: 0.5rem;
+    padding:0rem;
   }
 
   .heading {
@@ -210,14 +212,14 @@ facilities.section {
   }
 
   .description {
-    font-size: 3vh;
-    line-height: 5vh;
+    font-size: 2vh;
+    line-height: 3vh;
   }
 
   .li {
     margin: 3vh 3vw;
-    font-size: 3vh;
-    line-height: 5vh;
+    font-size: 2vh;
+    line-height: 3vh;
   }
 
   .FacultyTitle {
@@ -281,7 +283,7 @@ facilities.section {
   }
 
   .description {
-    font-size: 3vh;
+    font-size: 2vh;
     text-align: justify;
   }
 

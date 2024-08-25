@@ -22,14 +22,16 @@ const Listsetter = ({ data, list }) => {
     return (
         <>
             <div className={styles.li}>
+            <ul className={styles.list}>
                 {data && data[list] ? (
                     data?.[id].map((header, index) => (
                         //  console.log(header, index),
-                        <ul key={index} className={styles.list}>
+                       
                             <li key={index}>{header}</li>
-                        </ul>
+                       
                     ))
                 ) : (< h1 >Data Not available</h1>)}
+                 </ul>
             </div >
         </>
     );

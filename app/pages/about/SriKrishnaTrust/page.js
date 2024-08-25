@@ -3,7 +3,7 @@ import featchData from "@/app/pages/api/fetchdata";
 
 async function featch() {
     try {
-        const data = await featchData("SriKrishnaShikshanaPrathisthanaTrustGoverningCouncilandFacultyDetails");
+        const data = await featchData("SriKrishnaShikshanaPrathisthanaTrust");
         console.log(data);
         return data.props.webContent; //Return the homepage content on success
     } catch (error) {
@@ -18,7 +18,7 @@ async function featch() {
 }
 
 const TrustMembersTable = ({ data, identifier }) => {
-    //console.log(data);
+   // console.log(data);
     // const id = [identifier]
     // console.log(data?.[id]);
     let tableType = ["SL.No", "Name", "Designation"];;
@@ -68,7 +68,7 @@ export default async function aboutus() {
             <section className={styles.section}>
                 <div className={styles.content}>
 
-                    <p className={styles.heading}>{data.page}</p>
+                    <p className={styles.heading}>{}</p>
                     <div className={styles.group}>
                         <div >
                             <p className={styles.description}>{data.title}</p>
@@ -129,7 +129,7 @@ export default async function aboutus() {
                     </div>
                 </div>
             </section>
-        </>
+            </>
     );
 }
 export { aboutus };
