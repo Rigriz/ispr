@@ -4,19 +4,19 @@ import Link from "next/link";
 import featchData from "../api/fetchdata";
 
 async function featch() {
-    try {
-        const data = await featchData("Home");
-        console.log(data);
-        return data.props.webContent; //Return the homepage content on success
-    } catch (error) {
-        console.error(
-            "Error retrieving data from MongoDB getDataFromMongo:",
-            error,
-        );
-        return {
-            error: error.message
-        }; // Return an error object on failure
-    }
+  try {
+    const data = await featchData("Home");
+    console.log(data);
+    return data.props.webContent; //Return the homepage content on success
+  } catch (error) {
+    console.error(
+      "Error retrieving data from MongoDB getDataFromMongo:",
+      error,
+    );
+    return {
+      error: error.message
+    }; // Return an error object on failure
+  }
 }
 async function MainPage() {
   const data = await featch();
@@ -67,19 +67,34 @@ async function MainPage() {
                 />
               </div>
               <div className={styles.grievance}>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: DOMPurify.sanitize(data.GrievanceTitle),
-                  }}
-                />{" "}
-                <a className={styles.Link} href={data.GrievanceLink}>CLICK HERE</a>
+                <Link
+                  key={"Grievance"}
+                  href={"/pages/grievance"}
+                >
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: DOMPurify.sanitize(data.GrievanceTitle),
+                    }}
+                  />{" "}
+                </Link>
+                <Link
+                  key={"Grievance"}
+                  href={"/pages/grievance"}
+                >
+                  <p className={styles.Link} >CLICK HERE</p>
+                </Link>
               </div>
               <div className={styles.disclosure}>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: DOMPurify.sanitize(data.MandatoryTitle),
-                  }}
-                />{" "}
+                <Link
+                  key={"Grievance"}
+                  href={"/pages/grievance"}
+                >
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: DOMPurify.sanitize(data.MandatoryTitle),
+                    }}
+                  />{" "}
+                </Link>
                 <a className={styles.Link} href={data.MandatoryLink}>CLICK HERE</a>
               </div>
             </div>
@@ -177,7 +192,7 @@ async function MainPage() {
                   For Anti-Ragging Committee list &nbsp;
                   <Link
                     key={"AntiRagging"}
-                    href={"/AntiRagging"}
+                    href={"/pages/AntiRagging"}
                     className={styles.Link}
                   >
                     Click here

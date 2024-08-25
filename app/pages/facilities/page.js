@@ -50,58 +50,58 @@ export default async function cse() {
                         </div>
                     </div>
                     <div className={styles.group}>
-                        <h4 className={styles.heading}>{data.heading}</h4>
+                        <h3 className={styles.heading}>{data.heading}</h3>
                         <div className={styles.image}>
                             <img src="" alt="image of dept" />
                         </div>
                         <p className={styles.description}>{data.NewCampusDescription}</p>
                     </div>
                     <div className={styles.group}>
-                        <h4 className={styles.heading}>{data.heading2}</h4>
+                        <h3 className={styles.heading}>{data.heading2}</h3>
                         <Listsetter className={styles.li} data={data} list={'LibraryList'} />
                         <p className={styles.description}>{data.LibraryListFooter}</p>
                     </div>
                     <div className={styles.group}>
-                        <h4 className={styles.heading}>{data.heading3}</h4>
+                        <h3 className={styles.heading}>{data.heading3}</h3>
                         <p className={styles.description}>{data.heading3desc}</p>
                     </div>
                     <div className={styles.group}>
-                        <h4 className={styles.heading}>{data.heading4}</h4>
+                        <h3 className={styles.heading}>{data.heading4}</h3>
                         <p className={styles.description}>{data.heading4desc}</p>
                     </div>
                     <div className={styles.group}>
-                        <h4 className={styles.heading}>{data.heading5}</h4>
-                        <h4 className={styles.heading}>{data.heading4Footer}</h4>
+                        <h3 className={styles.heading}>{data.heading5}</h3>
+                        <h3 className={styles.heading}>{data.heading4Footer}</h3>
                         <p className={styles.description}>{data.heading5desc}</p>
                     </div>
                     <div className={styles.group}>
-                        <h4 className={styles.heading}>{data.heading6}</h4>
+                        <h3 className={styles.heading}>{data.heading6}</h3>
                         <p className={styles.description}>{data.heading6desc}</p>
                     </div>
                     <div className={styles.group}>
-                        <h4 className={styles.heading}>{data.heading7}</h4>
+                        <h3 className={styles.heading}>{data.heading7}</h3>
                         <p className={styles.description}>{data.heading7desc}</p>
                     </div>
                     <div className={styles.group}>
-                        <h4 className={styles.heading}>{data.heading8}</h4>
+                        <h3 className={styles.heading}>{data.heading8}</h3>
                         <p className={styles.description}>{data.heading8desc}</p>
                         <p className={styles.description}>{data.heading8desc2}</p>
                     </div>
                     <div className={styles.group}>
-                        <h4 className={styles.heading}>{data.heading9}</h4>
+                        <h3 className={styles.heading}>{data.heading9}</h3>
                         <p className={styles.description}>{data.heading9desc}</p>
                         <p className={styles.description}>{data.heading8desc}</p>
                     </div>
                     <div className={styles.group}>
-                        <h4 className={styles.heading}>{data.heading9}</h4>
+                        <h3 className={styles.heading}>{data.heading9}</h3>
                         <p className={styles.description}>{data.heading9desc}</p>
                     </div>
                     <div className={styles.group}>
-                        <h4 className={styles.heading}>{data.heading10}</h4>
+                        <h3 className={styles.heading}>{data.heading10}</h3>
                         <p className={styles.description}>{data.heading10desc}</p>
                     </div>
                     <div className={styles.group}>
-                        <h4 className={styles.heading}>{data.heading11}</h4>
+                        <h3 className={styles.heading}>{data.heading11}</h3>
                         <p className={styles.description}>{data.heading11desc}</p>
                     </div>
                     <div className={styles.group}>
