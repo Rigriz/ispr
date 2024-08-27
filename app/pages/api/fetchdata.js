@@ -2,16 +2,16 @@ import { MongoClient } from 'mongodb';
 
 export default async function getStaticProps(request) {
   try {
-    //const client = await MongoClient.connect(process.env.MONGODB_URI); 
-    // const db = client.db(process.env.DB_NAME);
-    //const collection = db.collection(process.env.WEB_CONTENT);
+    const client = await MongoClient.connect(process.env.MONGODB_URI); 
+     const db = client.db(process.env.DB_NAME);
+    const collection = db.collection(process.env.WEB_CONTENT);
     // Project only necessary fields (excluding _id)
-    //  const cursor = collection.find({}, { projection: { _id: 0 } });
-    //    const documents = await cursor.toArray();
-    //   await client.close();
+     const cursor = collection.find({}, { projection: { _id: 0 } });
+       const documents = await cursor.toArray();
+      await client.close();
     // Transform data into an object with page as the key
 
-    const documents = [{
+  /*  const documents = [{
       "_id": {
         "$oid": "66a72a45305c1474d56b4288"
       },
@@ -462,7 +462,7 @@ export default async function getStaticProps(request) {
       "Footer": "CLICK HERE FOR GRS OFFICE BEARERS",
       "Footer1": "CLICK HERE  FOR ONLINE GRS PROCEDURE",
     }
-    ]
+    ] */
     const json = documents.reduce((acc, item) => {
       if (item.page) { // Ensure the field exists for a unique key
         acc[item.page] = item;

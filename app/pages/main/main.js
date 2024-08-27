@@ -139,7 +139,7 @@ async function MainPage() {
               <div className={styles.coursesList}>
                 <Link
                   key={"course1"}
-                  href={"http://www.google.com"}
+                  href={"/pages/departments/Cse"}
                   className={styles.courseLink}
                 >
                   <p
@@ -150,7 +150,7 @@ async function MainPage() {
                 </Link>
                 <Link
                   key={"course2"}
-                  href={"http://www.google.com"}
+                  href={"/pages/departments/ec"}
                   className={styles.courseLink}
                 >
                   <p
@@ -161,7 +161,7 @@ async function MainPage() {
                 </Link>
                 <Link
                   key={"course3"}
-                  href={"http://www.google.com"}
+                  href={"/pages/departments/mec"}
                   className={styles.courseLink}
                 >
                   <p
@@ -172,7 +172,7 @@ async function MainPage() {
                 </Link>
                 <Link
                   key={"course4"}
-                  href={"http://www.google.com"}
+                  href={"/pages/departments/adft"}
                   className={styles.courseLink}
                 >
                   <p

@@ -164,11 +164,12 @@
   }
 
   .description {
-    font-size: small;
+    font-size: 2.5vh;
+    line-height: 1.2rem;
   }
 
   .FacultyTitle {
-    font-size: small;
+    font-size: 2.5vh;
     line-height: 1.2rem;
   }
 
