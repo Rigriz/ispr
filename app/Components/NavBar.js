@@ -1,7 +1,12 @@
 'use client'
 import Link from "next/link";
+import { useState } from 'react';
 import Shtyles from "@/app/Styles/Navbar.module.css";
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  }
   return (
     <>
       <div className={Shtyles.header}>
@@ -18,27 +23,33 @@ function Navbar() {
           </p>
         </div>
       </div>
-      <nav className={Shtyles.nav}>
+      <button className={Shtyles.menuButton} onClick={toggleMenu}>
+        <div className={Shtyles.bar}></div> <div className={Shtyles.bar}></div> <div className={Shtyles.bar}></div>
+      </button>
+      <nav className={`${Shtyles.nav} ${isOpen ? Shtyles.navOpen : ''}`}>
+      <button className={Shtyles.menuButton} onClick={toggleMenu}>
+        <div className={Shtyles.bar}></div> <div className={Shtyles.bar}></div> <div className={Shtyles.bar}></div>
+      </button>
         <ul className={Shtyles.navul}>
           <li className={Shtyles.navLi}>
-            <Link href="/">
+            <Link className={Shtyles.Link}  href="/">
               <span className={Shtyles.a}>Home</span>
             </Link>
           </li>
           <li className={`${Shtyles.navLi}  ${Shtyles.dropdownBtn}`}>
-            <Link href="/pages/about">
+            <Link className={Shtyles.Link} href="/pages/about">
               <span className={Shtyles.a}>About-Us</span>
             </Link>
             <ul className={Shtyles.dropContent}>
               <li>
-                <Link href="/pages/about">
+                <Link className={Shtyles.Link} href="/pages/about">
                   <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Principel Desk
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/pages/about/SriKrishnaTrust">
+                <Link className={Shtyles.Link} href="/pages/about/SriKrishnaTrust">
                   <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Sri-Krishna-Shikshana-Prathisthana-Trust
                   </span>
@@ -47,32 +58,32 @@ function Navbar() {
             </ul>
           </li>
           <li className={`${Shtyles.navLi}  ${Shtyles.dropdownBtn}`}>
-            <Link href="/pages/departments">
+            <Link className={Shtyles.Link} href="/pages/departments">
               <span className={Shtyles.a}>Department</span>
             </Link>
             <ul className={Shtyles.dropContent}>
               <li>
-                <Link href="/pages/departments/Cse">
+                <Link className={Shtyles.Link} href="/pages/departments/Cse">
                   <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Computer Science Engineering
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/pages/departments/ec">
+                <Link className={Shtyles.Link} href="/pages/departments/ec">
                   <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Electronics & Communication Engineering
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/pages/departments/mec">
+                <Link className={Shtyles.Link} href="/pages/departments/mec">
                   <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Mechanical Engineering</span>
                 </Link>
               </li>
               <li>
-                <Link href="/pages/departments/adft">
+                <Link className={Shtyles.Link} href="/pages/departments/adft">
                   <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
                     Apparel Design & Fabrication Technology
                   </span>
@@ -81,22 +92,22 @@ function Navbar() {
             </ul>
           </li>
           <li className={Shtyles.navLi}>
-            <Link href="/pages/facilities">
+            <Link className={Shtyles.Link} href="/pages/facilities">
               <span className={Shtyles.a}>Facilities</span>
             </Link>
           </li>
           <li className={Shtyles.navLi}>
-            <Link href="./pages/Admission">
+            <Link className={Shtyles.Link} href="./pages/Admission">
               <span className={Shtyles.a}>Admission</span>
             </Link>
           </li>
           <li className={Shtyles.navLi}>
-            <Link href="./pages/Photo-Gallery">
+            <Link className={Shtyles.Link} href="./pages/Photo-Gallery">
               <span className={Shtyles.a}>Photo Gallery</span>
             </Link>
           </li>
           <li className={Shtyles.navLi}>
-            <Link href="./Pages/Contact-Us">
+            <Link className={Shtyles.Link} href="./Pages/Contact-Us">
               <span className={Shtyles.a}>Contact-Us</span>
             </Link>
           </li>

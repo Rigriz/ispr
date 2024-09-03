@@ -47,41 +47,13 @@
   white-space: nowrap;
 }
 
-@media (max-width: 768px) {
-  .image {
-    width: 9vw;
-  }
-
-  .headerTitle .headerBrand {
-    font-size: 2vw;
-  }
-}
-
-@media (max-width: 480px) {
-  .image {
-    width: 10vw;
-  }
-
-  .headerTitle .headerBrand {
-    font-size: 2.5vw;
-  }
-
-  .headerTitle .p {
-    font-size: 14px;
-  }
-
-  .nav .navul {
-    justify-content: flex-end;
-    padding-left: 35vw
-  }
-
-  .navLi {
-    font-size: 2vw;
-  }
-
-  .navul .navLi .a {
-    font-size: 2.5vw;
-  }
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-style: 24px;
+  padding: 10px;
 
 }
 
@@ -109,7 +81,7 @@
   margin-right: 2%;
 }
 
- .a  {
+.a {
   font-size: 2vw;
   padding: 1px;
   display: block;
@@ -124,6 +96,7 @@
   transition: background-color 0.3s ease;
   box-shadow: 0px 2px 5px rgba(211, 204, 204, 0.031);
 }
+
 .nav .a:hover {
   color: black;
   background-color: rgba(239, 239, 239, 0.973);
@@ -142,14 +115,16 @@
   min-width: 160px;
   z-index: 1;
   width: auto;
-  display:none;
+  display: none;
   border-radius: 0.172rem;
 }
+
 .dropContent li {
   text-align: left;
   margin: 1vh 1wh;
 }
-.dropContent .dropa{
+
+.dropContent .dropa {
   display: block;
   text-align: left;
   margin: 1%;
@@ -168,6 +143,7 @@
 
 .dropdownBtn:hover .dropContent {
   display: block;
+
   .dropa :hover {
     background-color: #57ffc1d4;
     color: aqua;
@@ -177,6 +153,168 @@
 
 
 
+@media (max-width: 768px) {
+  .image {
+    width: 9vw;
+  }
+
+  .headerTitle .headerBrand {
+    font-size: 2vw;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    transform: translateX(-100%);
+    background-color: #333;
+    padding-top: 60px;
+    /* Adjust based on your button height */
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .menuButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    /* Width of the hamburger menu */
+    height: 30px;
+    /* Height of the hamburger menu */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 10px;
+  }
+
+  .bar {
+    width: 100%;
+    /* Full width of the hamburger menu */
+    height: 5px;
+    /* Thickness of the bars */
+    background-color: black;
+    /* Color of the bars */
+    margin: 4px 0;
+    /* Space between the bars */
+    transition: 0.3s;
+    /* Smooth transition for animations */
+  }
+
+  .menuButton:hover .bar {
+    background-color: gray;
+  }
+
+  .navOpen {
+    transform: translateX(0);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+  }
+
+  .navOpen {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+  }
+
+  .navul {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: fit-content;
+    width: inherit;
+  }
+
+  .navLi {
+    background-color: transparent;
+    align-items: flex-start;
+    margin-top: 0%;
+    text-align: flex-start;
+    width: inherit;
+  }
+  .Link{
+    width: inherit;
+  }
+  .navLi .a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    width: inherit;
+  }
+  .navLi .a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(50, 179, 253);
+  }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .dropdown-menu li .a {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .dropdown-menu li .a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ff0;
+    /* Change text color on hover */
+  }
+
+  .navLi:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/*
+@media (max-width: 480px) {
+  .image {
+    width: 10vw;
+  }
+
+  .headerTitle .headerBrand {
+    font-size: 2.5vw;
+  }
+
+  .headerTitle .p {
+    font-size: 14px;
+  }
+
+  .nav .navul {
+    justify-content: flex-end;
+    padding-left: 35vw
+  }
+
+  .navLi {
+    font-size: 2vw;
+  }
+
+  .navul .navLi .a {
+    font-size: 2.5vw;
+  }
+
+}
+*/
 /*
 .dropContent li {
    styles for the li elements inside the dropdown content ul
