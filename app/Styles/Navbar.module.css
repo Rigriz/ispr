@@ -1,3 +1,6 @@
+.navpc{
+  display: none;
+}
 .header {
   display: flex;
   flex-direction: row;
@@ -93,18 +96,12 @@
   color: #fff;
   text-decoration: none;
 }
-.navLi :hover {
-  background-color: transparent;
-}
-.navLi .a:hover { 
-  background-color: rgba(255, 255, 255, 0.2);
-  color: rgb(255, 255, 255);
-}
+
 .dropdownBtn {
   position: relative;
 }
 .dropContent {
-  display: none;
+  display:none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -115,16 +112,17 @@
   width: auto;
   border-radius: 0.172rem;
 }
+
 .dropContent li {
   text-align: left;
-  margin: 1vh 1wh;
+  margin: 0vh 0wh;
 }
 .dropContent .dropa {
   display: block;
   text-align: left;
-  margin: 1%;
+  margin: 0%;
   padding: 2%;
-  font-size: 2vw;
+  font-size: 1.5vw;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -133,20 +131,33 @@
   transition: background-color 0.3s ease;
   box-shadow: 0px 2px 5px rgba(211, 204, 204, 0.031);
 }
-.navLi .dropdownBtn:hover .dropContent{
-  display: block;
- }
- .navLi .droptdownBtn :hover .dropa{
-  display: block;
- }
- .navLi .dropdownBtn :hover .dropClose{
-  display: block; 
-}
-.dropdownBtn:hover .dropClose {
-  display: block;
-}
+
+@media (min-width: 1020px) { 
+  .navpc{
+    display: block;
+  }
+  .nav {
+    display: none;
+  }
+  .nav .a:hover {
+    color: black;
+    background-color: rgba(239, 239, 239, 0.973);
+  }
+  .dropdownBtn:hover .dropContent {
+    display: block;
+    .dropa :hover {
+      background-color: #57ffc1d4;
+      color: aqua;
+      font-size: 12%;
+    }
+  }
   
+}
 @media (max-width: 768px) {
+  .navpc{
+    display: none;
+  }
+
   .image {
     width: 9vw;
   }
@@ -260,7 +271,6 @@
   .dropClose {
     display: none;
   }
-
   .dropOpen {
     display: block;
     position: absolute;
@@ -275,7 +285,6 @@
     color: white;
     text-decoration: none;
   }
-
   .navLi .a:hover {
     background-color: rgba(255, 255, 255, 0.2);
     color: rgb(50, 179, 253);
