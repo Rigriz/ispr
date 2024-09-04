@@ -23,7 +23,7 @@
   margin: 0px 0px 0px 0px;
   width: 10vw;
   max-width: 142px;
-  height: auto;
+  height: auto;           
 }
 
 .headerTitle {
@@ -54,7 +54,7 @@
   color: white;
   font-style: 24px;
   padding: 10px;
-
+ cursor: pointer;
 }
 
 .nav {
@@ -141,18 +141,6 @@
   box-shadow: 0px 2px 5px rgba(211, 204, 204, 0.031);
 }
 
-.dropdownBtn:hover .dropContent {
-  display: block;
-
-  .dropa :hover {
-    background-color: #57ffc1d4;
-    color: aqua;
-    font-size: 12%;
-  }
-}
-
-
-
 @media (max-width: 768px) {
   .image {
     width: 9vw;
@@ -171,18 +159,24 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 250px;
+    width: 160px;
     transform: translateX(-100%);
     background-color: #333;
     padding-top: 60px;
     /* Adjust based on your button height */
   }
-
+  .navOpen {
+    transform: translateX(0);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+  }
   .menuButton {
     display: block;
-  }
-
-  .menuButton {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -197,7 +191,7 @@
     padding: 0;
     margin: 10px;
   }
-
+  
   .bar {
     width: 100%;
     /* Full width of the hamburger menu */
@@ -215,20 +209,6 @@
     background-color: gray;
   }
 
-  .navOpen {
-    transform: translateX(0);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: fixed;
-  }
-
-  .navOpen {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px 0;
-  }
-
   .navul {
     display:flex;
     flex-direction: column;
@@ -241,47 +221,56 @@
     background-color: transparent;
     align-items: flex-start;
     margin-top: 0%;
-    text-align: flex-start;
+    padding: 0%;
     width: inherit;
+    
   }
   .Link{
     width: inherit;
   }
   .navLi .a {
     display: block;
-    padding: 10px 20px;
+    padding: 12px 7px;
     color: white;
     text-decoration: none;
     width: inherit;
+    text-align: left;
+    font-size: 92%;
+
+  }
+  .drop{
+    position: relative;
+    display: inline-block;
+  }
+  .dropico{
+    display: block;
+  }
+  .dropClose{
+    display: none;
+  }
+  .dropOpen{
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 0%;
+    list-style-type: none;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .dropOpen li .a {
+    padding: 10px 5px;
+    color: white;
+    text-decoration: none;
   }
   .navLi .a:hover {
     background-color: rgba(255, 255, 255, 0.2);
     color: rgb(50, 179, 253);
   }
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
-  .dropdown-menu li .a {
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-  }
-
-  .dropdown-menu li .a:hover {
+  .dropOpen li .a:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    color: #ff0;
+    color: rgb(50, 179, 253);
     /* Change text color on hover */
   }
-
-  .navLi:hover .dropdown-menu {
+  .navLi:hover .dropOpen {
     display: block;
   }
 }
