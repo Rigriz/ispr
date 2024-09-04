@@ -241,11 +241,9 @@
     width: inherit;
 
   }
-
   .Link {
     width: inherit;
   }
-
   .navLi .a {
     display: block;
     padding: 12px 7px;
@@ -256,16 +254,13 @@
     font-size: 92%;
 
   }
-
   .drop {
     position: relative;
     display: inline-block;
   }
-
   .dropico {
     display: block;
   }
-
   .dropClose {
     display: none;
   }
