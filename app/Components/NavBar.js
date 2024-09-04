@@ -23,7 +23,6 @@ function Navbar() {
     if (dept) { setDept(!dept); }
     if (isOpen) { setIsOpen(!isOpen); }
   }
-
   return (
     <>
       <div className={Styles.header}>
@@ -44,7 +43,7 @@ function Navbar() {
         <div className={Styles.bar}></div> <div className={Styles.bar}></div> <div className={Styles.bar}></div>
       </button>}
      {<nav className={`${Styles.nav} ${isOpen ? Styles.navOpen : ''}`}>
-        {isOpen ? <button className={Styles.menuButton} onClick={toggleMenu}>
+        {isOpen ? <button className={Styles.menuButton} onClick={toggleAll}>
           <div className={Styles.bar}></div> <div className={Styles.bar}></div> <div className={Styles.bar}></div>
         </button> : ''}
         <ul className={Styles.navul}>
