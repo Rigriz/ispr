@@ -1,8 +1,10 @@
 'use client'
+import {useRouter} from 'next/navigation';
 import Link from "next/link";
 import { useState } from 'react';
 import Styles from "@/app/Styles/Navbar.module.css";
 import Shtyles from "@/app/Styles/Navbar.module.css";
+import { Router } from 'next/router';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -147,10 +149,10 @@ function Navbar() {
                 </li>
                 <li>
                   <Link href="/about/SriKrishnaTrust">
-                    <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
+                    <span className={`${Shtyles.dropa} ${Shtyles.a}`} >
                       Sri-Krishna-Shikshana-Prathisthana-Trust
                     </span>
-                  </Link>
+                    </Link>
                 </li>
               </ul>
             </li>

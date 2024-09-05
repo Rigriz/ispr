@@ -1,8 +1,9 @@
+'use client'
 import DOMPurify from "isomorphic-dompurify";
 import styles from "@/app/Styles/main.module.css";
 import Link from "next/link";
 import featchData from "../api/fetchdata";
-
+import { useRouter } from "next/navigation";
 
 
 export const metadata ={
@@ -72,16 +73,12 @@ async function MainPage() {
                 />
               </div>
               <div className={styles.grievance}>
-                <Link
-                  key={"Grievance"}
-                  href={"/grievance"}
-                >
+              
                   <p
                     dangerouslySetInnerHTML={{
                       __html: DOMPurify.sanitize(data.GrievanceTitle),
                     }}
-                  />{" "}
-                </Link>
+                  onClick={()=>Router.push('/grievance')}/>{" "}
                 <Link
                   key={"Mandatory"}
                   href={"/grievance"}

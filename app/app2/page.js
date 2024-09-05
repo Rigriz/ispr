@@ -1,6 +1,7 @@
 import styles from "../Styles/page.module.css";
 import style from "../Styles/home.module.css";
 
+
 export default async function Home() {
     return (
         <section className={styles.main}>
