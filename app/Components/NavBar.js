@@ -42,7 +42,7 @@ function Navbar() {
       {isOpen ? ' ' : <button className={Styles.menuButton} onClick={toggleMenu}>
         <div className={Styles.bar}></div> <div className={Styles.bar}></div> <div className={Styles.bar}></div>
       </button>}
-     {<nav className={`${Styles.nav} ${isOpen ? Styles.navOpen : ''}`}>
+      {<nav className={`${Styles.nav} ${isOpen ? Styles.navOpen : ''}`}>
         {isOpen ? <button className={Styles.menuButton} onClick={toggleAll}>
           <div className={Styles.bar}></div> <div className={Styles.bar}></div> <div className={Styles.bar}></div>
         </button> : ''}
@@ -96,7 +96,7 @@ function Navbar() {
               </li>
               <li onClick={() => { toggleDept, toggleMenu }}>
                 <Link className={Styles.Link} href="/departments/adft">
-                  <span className={`${Styles.dropa} ${Styles.a}`}onClick={toggleAll}>
+                  <span className={`${Styles.dropa} ${Styles.a}`} onClick={toggleAll}>
                     Apparel Design & Fabrication Technology
                   </span>
                 </Link>
@@ -124,88 +124,90 @@ function Navbar() {
             </Link>
           </li>
         </ul>
-      </nav > }
+      </nav >}
       {
         <nav className={Shtyles.navpc}>
-        <ul className={Shtyles.navul}>
-          <li className={Shtyles.navLi}>
-            <Link href="/">
-              <span className={Shtyles.a}>Home</span>
-            </Link>
-          </li>
-          <li className={`${Shtyles.navLi}  ${Shtyles.dropdownBtn}`}>
-            <Link href="/about">
+          <ul className={Shtyles.navul}>
+            <li className={Shtyles.navLi}>
+              <Link href="/">
+                <span className={Shtyles.a}>Home</span>
+              </Link>
+            </li>
+            <li className={`${Shtyles.navLi}  ${Shtyles.dropdownBtn}`}>
+
               <span className={Shtyles.a}>About-Us</span>
-            </Link>
-            <ul className={Shtyles.dropContent}>
-              <li>
-                  <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
-                    Principel Desk
-                  </span>
-              </li>
-              <li>
-                <Link href="/about/SriKrishnaTrust">
-                  <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
-                    Sri-Krishna-Shikshana-Prathisthana-Trust
-                  </span>
-                </Link>
-              </li>
-            </ul>
-          </li>
-          <li className={`${Shtyles.navLi}  ${Shtyles.dropdownBtn}`}>
+
+              <ul className={Shtyles.dropContent}>
+                <li>
+                  <Link href="/about">
+                    <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
+                      Principel Desk
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about/SriKrishnaTrust">
+                    <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
+                      Sri-Krishna-Shikshana-Prathisthana-Trust
+                    </span>
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className={`${Shtyles.navLi}  ${Shtyles.dropdownBtn}`}>
               <span className={Shtyles.a}>Department</span>
-            <ul className={Shtyles.dropContent}>
-              <li>
-                <Link href="/departments/Cse">
-                  <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
-                    Computer Science Engineering
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/departments/ec">
-                  <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
-                    Electronics & Communication Engineering
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/departments/mec">
-                  <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
-                    Mechanical Engineering</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/departments/adft">
-                  <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
-                    Apparel Design & Fabrication Technology
-                  </span>
-                </Link>
-              </li>
-            </ul>
-          </li>
-          <li className={Shtyles.navLi}>
-            <Link href="/facilities">
-              <span className={Shtyles.a}>Facilities</span>
-            </Link>
-          </li>
-          <li className={Shtyles.navLi}>
-            <Link href="./Admission">
-              <span className={Shtyles.a}>Admission</span>
-            </Link>
-          </li>
-          <li className={Shtyles.navLi}>
-            <Link href="./Photo-Gallery">
-              <span className={Shtyles.a}>Photo Gallery</span>
-            </Link>
-          </li>
-          <li className={Shtyles.navLi}>
-            <Link href="./Contact-Us">
-              <span className={Shtyles.a}>Contact-Us</span>
-            </Link>
-          </li>
-        </ul>
-      </nav >
+              <ul className={Shtyles.dropContent}>
+                <li>
+                  <Link href="/departments/Cse">
+                    <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
+                      Computer Science Engineering
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/departments/ec">
+                    <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
+                      Electronics & Communication Engineering
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/departments/mec">
+                    <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
+                      Mechanical Engineering</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/departments/adft">
+                    <span className={`${Shtyles.dropa} ${Shtyles.a}`}>
+                      Apparel Design & Fabrication Technology
+                    </span>
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className={Shtyles.navLi}>
+              <Link href="/facilities">
+                <span className={Shtyles.a}>Facilities</span>
+              </Link>
+            </li>
+            <li className={Shtyles.navLi}>
+              <Link href="./Admission">
+                <span className={Shtyles.a}>Admission</span>
+              </Link>
+            </li>
+            <li className={Shtyles.navLi}>
+              <Link href="./Photo-Gallery">
+                <span className={Shtyles.a}>Photo Gallery</span>
+              </Link>
+            </li>
+            <li className={Shtyles.navLi}>
+              <Link href="./Contact-Us">
+                <span className={Shtyles.a}>Contact-Us</span>
+              </Link>
+            </li>
+          </ul>
+        </nav >
       }
     </>
   );
