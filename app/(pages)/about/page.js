@@ -2,6 +2,12 @@ import DOMPurify from "isomorphic-dompurify";
 import styles from "@/app/Styles/about.module.css";
 import featchData from "../api/fetchdata";
 
+
+
+export const metadata ={
+  title:"ISRP | About"
+}
+
 async function featch() {
     try {
         const data = await featchData("Aboutus");

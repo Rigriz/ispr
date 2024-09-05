@@ -1,6 +1,10 @@
 import styles from "@/app/Styles/antiragging.module.css";
 import featchData from "../../api/fetchdata";
 
+
+export const metadata ={
+    title:"ISRP | E&C"
+}
 async function featch() {
     try {
         const data = await featchData("ec");

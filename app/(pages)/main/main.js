@@ -2,8 +2,12 @@ import DOMPurify from "isomorphic-dompurify";
 import styles from "@/app/Styles/main.module.css";
 import Link from "next/link";
 import featchData from "../api/fetchdata";
-import Head from 'next/head';
 
+
+
+export const metadata ={
+  title:"ISRP"
+}
 async function featch() {
   try {
     const data = await featchData("Home");
@@ -26,9 +30,6 @@ async function MainPage() {
   //console.log(data, "heimana");
   return (
     <>
-    <Head>
-      <title>ISRP | Home</title>
-    </Head>
       <div className={styles.main}>
         <div className={styles.container}>
           <div className={styles.leftContainer}>

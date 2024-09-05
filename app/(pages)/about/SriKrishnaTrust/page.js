@@ -1,6 +1,10 @@
 import styles from "@/app/Styles/SrikrishnaTrust.module.css";
 import featchData from "@/app/(pages)/api/fetchdata";
 
+
+export const metadata ={
+    title:"ISRP | Sri Krishna Shikshana Prathisthana Trust"
+} 
 async function featch() {
     try {
         const data = await featchData("SriKrishnaShikshanaPrathisthanaTrust");

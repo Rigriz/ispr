@@ -1,6 +1,11 @@
 import styles from "@/app/Styles/dept.module.css";
 import featchData from "../../api/fetchdata";
 
+
+
+export const metadata ={
+    title:"ISRP | CSE"
+}
 async function featch() {
     try {
         const data = await featchData("cse");
