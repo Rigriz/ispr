@@ -1,6 +1,7 @@
 import styles from '@/app/Styles/grievance.module.css';
 import featchData from "../api/fetchdata";
 import Link from 'next/link';
+import Head from 'next/head';
 async function featch() {
     try {
         const data = await featchData("Grievance");
@@ -22,6 +23,11 @@ export default async function antiragging() {
     // console.log(data, "heimana")
     return (
         <>
+        <Head>
+            <title>
+                ISRP | Grievance
+            </title>
+        </Head>
             <section className={styles.section}>
                 <div className={styles.content}>
                     <div className={styles.group}>

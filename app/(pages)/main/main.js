@@ -2,6 +2,7 @@ import DOMPurify from "isomorphic-dompurify";
 import styles from "@/app/Styles/main.module.css";
 import Link from "next/link";
 import featchData from "../api/fetchdata";
+import Head from 'next/head';
 
 async function featch() {
   try {
@@ -25,6 +26,9 @@ async function MainPage() {
   //console.log(data, "heimana");
   return (
     <>
+    <Head>
+      <title>ISRP | Home</title>
+    </Head>
       <div className={styles.main}>
         <div className={styles.container}>
           <div className={styles.leftContainer}>
