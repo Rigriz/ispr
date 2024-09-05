@@ -1,5 +1,5 @@
 import styles from "@/app/Styles/SrikrishnaTrust.module.css";
-import featchData from "@/app/pages/api/fetchdata";
+import featchData from "@/app/(pages)/api/fetchdata";
 
 async function featch() {
     try {

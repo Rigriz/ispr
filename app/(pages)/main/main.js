@@ -69,7 +69,7 @@ async function MainPage() {
               <div className={styles.grievance}>
                 <Link
                   key={"Grievance"}
-                  href={"/pages/grievance"}
+                  href={"/grievance"}
                 >
                   <p
                     dangerouslySetInnerHTML={{
@@ -78,8 +78,8 @@ async function MainPage() {
                   />{" "}
                 </Link>
                 <Link
-                  key={"Grievance"}
-                  href={"/pages/grievance"}
+                  key={"Mandatory"}
+                  href={"/grievance"}
                 >
                   <p className={styles.Link} >CLICK HERE</p>
                 </Link>
@@ -87,7 +87,7 @@ async function MainPage() {
               <div className={styles.disclosure}>
                 <Link
                   key={"Grievance"}
-                  href={"/pages/grievance"}
+                  href={"/grievance"}
                 >
                   <p
                     dangerouslySetInnerHTML={{
@@ -139,7 +139,7 @@ async function MainPage() {
               <div className={styles.coursesList}>
                 <Link
                   key={"course1"}
-                  href={"/pages/departments/Cse"}
+                  href={"/departments/Cse"}
                   className={styles.courseLink}
                 >
                   <p
@@ -150,7 +150,7 @@ async function MainPage() {
                 </Link>
                 <Link
                   key={"course2"}
-                  href={"/pages/departments/ec"}
+                  href={"/departments/ec"}
                   className={styles.courseLink}
                 >
                   <p
@@ -161,7 +161,7 @@ async function MainPage() {
                 </Link>
                 <Link
                   key={"course3"}
-                  href={"/pages/departments/mec"}
+                  href={"/departments/mec"}
                   className={styles.courseLink}
                 >
                   <p
@@ -172,7 +172,7 @@ async function MainPage() {
                 </Link>
                 <Link
                   key={"course4"}
-                  href={"/pages/departments/adft"}
+                  href={"/departments/adft"}
                   className={styles.courseLink}
                 >
                   <p
@@ -192,7 +192,7 @@ async function MainPage() {
                   For Anti-Ragging Committee list &nbsp;
                   <Link
                     key={"AntiRagging"}
-                    href={"/pages/AntiRagging"}
+                    href={"/AntiRagging"}
                     className={styles.Link}
                   >
                     Click here
