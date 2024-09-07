@@ -1,7 +1,7 @@
 // components/AdminLogin.js
 'use client'
 import { useState } from 'react';
-import styles from '@/app/Styles/';
+import styles from '../Styles/login.moudule.css';
 
 const AdminLogin = () => {
   const [username, setUsername] = useState('');
