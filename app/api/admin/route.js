@@ -454,8 +454,8 @@ async function fetch() {
       }
       return acc;
     }, {});
-    console.log("Transformed JSON data");
-    return (document);
+  //  console.log("Transformed JSON data");
+    return (json);
   } catch (err) {
     console.error("Error fetching data from MongoDB", err);
     return {
@@ -465,5 +465,5 @@ async function fetch() {
 }
 export async function GET() {
   const data = await fetch();
-  return NextResponse.json({ data });
+  return NextResponse.json({data});
 }
