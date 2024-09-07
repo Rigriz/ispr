@@ -17,7 +17,7 @@ async function fetch() {
     
     const documents = [{
         "page": "Home",
-        "title": "Welcome to Indira Shiva Rao Polytechnic",
+        "title": "Welcome to Indira Shiva Rao Polytechnic.",
         "description": "Indira &nsp;Shiva Rao Polytechnic is an institution run by <b>Sri Krishna Shikshana Prathisthana Trust, Sri Krishnapura Mutt,</b> Car Street, Udupi, Under the able guidance of Sri Sri Vidyasagara Theertha Swamiji, who is the President of the Trust. The polytechnic started functioning in the year 1997 as the first and only Private Women’s Polytechnic in the entire undivided Dakshina Kannada district. Due to popular demand from the parents for admission of boys, it was subsequently converted into a co-ed polytechnic in the year 1999",
         "MissionTitle": "Mission",
         "MissionDescription": "To work with utmost will and determination for achieving overall personality development and intellectual growth of the students with effective deployment and management of best educational & infrastructural facilities.",
@@ -455,7 +455,7 @@ async function fetch() {
       return acc;
     }, {});
     console.log("Transformed JSON data");
-    return (json);
+    return (document);
   } catch (err) {
     console.error("Error fetching data from MongoDB", err);
     return {
