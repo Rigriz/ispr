@@ -3,8 +3,36 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  position: relative;
   background-color: #f8f8f8;
   /* Light grey background */
+}
+
+.message {
+  position: absolute; /* Absolute positioning to align within the parent container */
+  top: 10px; /* Distance from the top */
+  right: 10px; /* Distance from the right */
+  padding: 10px;
+  margin: 0;
+  border-radius: 5px; /* Added border-radius for a better look */
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for visibility */
+  font-size: 18px;
+  text-align: center;
+  z-index: 1000; /* Ensures it appears above other content */
+}
+
+.error {
+  background: orange;
+  font-weight: bolder;
+  color: white;
+}
+
+.success {
+  font-weight: bolder;
+  color: white;
+  background-color: #86ec89;
+  /* Green background for success */
 }
 
 .title {
@@ -41,6 +69,7 @@
   border-radius: 8px;
   font-size: 4vh;
 }
+
 .input:focus {
   border-color: #0070f3;
   /* Blue border on focus */
