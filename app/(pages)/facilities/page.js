@@ -31,9 +31,7 @@ const Listsetter = ({ data, list }) => {
                 {data && data[list] ? (
                     data?.[id].map((header, index) => (
                         //  console.log(header, index),
-                       
-                            <li key={index}>{header}</li>
-                       
+                        <li key={index}>{header}</li>
                     ))
                 ) : (< h1 >Data Not available</h1>)}
                  </ul>
