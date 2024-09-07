@@ -1,6 +1,6 @@
 import { NextResponse, NextApiRequest } from 'next/server';
 import { getalldata } from "./getdata";
-async function fetch() {
+export async function fetchdata() {
   try {// const client = new MongoClient(process.env.MONGODB_URI);
     //await client.connect();
     //console.log("Connected successfully to MongoDB");
@@ -455,7 +455,7 @@ async function fetch() {
       return acc;
     }, {});
   //  console.log("Transformed JSON data");
-    return (json);
+    return (documents);
   } catch (err) {
     console.error("Error fetching data from MongoDB", err);
     return {
@@ -464,6 +464,6 @@ async function fetch() {
   }
 }
 export async function GET() {
-  const data = await fetch();
+  const data = await fetchdata();
   return NextResponse.json({data});
 }
