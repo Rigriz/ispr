@@ -1,5 +1,7 @@
-import { NextResponse } from 'next/server';
-
+import { NextResponse, NextApiRequest } from 'next/server';
+import {getalldata} from "./getdata"
 export async function GET() {
-  return NextResponse.json({ message: 'Hello  Admin from Next.js!' });
+  
+    const data = await getalldata();
+  return NextResponse.json({ data });
 }
