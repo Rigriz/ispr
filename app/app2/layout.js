@@ -1,7 +1,9 @@
 import { Inter } from "next/font/google";
 import "../Styles/globals.css";
-import styles from "../Styles/page.module.css";
+import Styles from "../Styles/page.module.css";
 const inter = Inter({ subsets: ["latin"] });
+import styles from "../Styles/login.moudule.css";
+
 
 export default function RootLayout({ children }) {
     return (
@@ -9,9 +11,9 @@ export default function RootLayout({ children }) {
             <head>
                 <title>App2</title>
             </head>
-            <body className={inter.className}>
-                <section className={inter.className}>
-                    <div className={styles.main}>{children}</div>
+            <body>
+                <section >
+                    <div className={Styles.main}>{children}</div>
                 </section>
             </body>
         </html>
