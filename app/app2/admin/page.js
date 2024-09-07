@@ -26,9 +26,6 @@ export default async function admin() {
   const res = await fetchdata();
   const data = res[0];
   console.log(data);
-  const resp = JSON.parse(JSON.stringify(data));
-  console.log(resp);
-
   return (
     <>
       <iterat />{ 
