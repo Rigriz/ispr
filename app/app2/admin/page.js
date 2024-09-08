@@ -21,14 +21,13 @@ async function iterat() {
     <textarea>{data[0]}</textarea>
   );
 }
-
 export default async function admin() {
   const res = await fetchdata();
   const data = res[0];
   console.log(data);
   return (
     <>
-      <iterat />{ 
+      <iterat />{
       /*
       data ? ( 
         data.map((items, index) => (
