@@ -14,7 +14,7 @@ export async function fetchdata() {
     // const json = JSON.parse(JSON.stringify(documents));
     //await client.close();
     // Transform array into an object with unique field as keys
-    
+  
     const documents = [{
         "page": "Home",
         "title": "Welcome to Indira Shiva Rao Polytechnic.",
