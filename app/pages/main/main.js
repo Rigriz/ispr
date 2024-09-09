@@ -78,10 +78,10 @@ async function MainPage() {
                     dangerouslySetInnerHTML={{
                       __html: DOMPurify.sanitize(data.GrievanceTitle),
                     }}
-                  onClick={()=>Router.push('/grievance')}/>{" "}
+                  onClick={()=>Router.push('/pages/grievance')}/>{" "}
                 <Link
                   key={"Mandatory"}
-                  href={"/grievance"}
+                  href={"/pages/grievance"}
                 >
                   <p className={styles.Link} >CLICK HERE</p>
                 </Link>
@@ -141,7 +141,7 @@ async function MainPage() {
               <div className={styles.coursesList}>
                 <Link
                   key={"course1"}
-                  href={"/departments/Cse"}
+                  href={"/pages/departments/Cse"}
                   className={styles.courseLink}
                 >
                   <p
@@ -152,7 +152,7 @@ async function MainPage() {
                 </Link>
                 <Link
                   key={"course2"}
-                  href={"/departments/ec"}
+                  href={"/pages/departments/ec"}
                   className={styles.courseLink}
                 >
                   <p
@@ -163,7 +163,7 @@ async function MainPage() {
                 </Link>
                 <Link
                   key={"course3"}
-                  href={"/departments/mec"}
+                  href={"/pages/departments/mec"}
                   className={styles.courseLink}
                 >
                   <p
@@ -174,7 +174,7 @@ async function MainPage() {
                 </Link>
                 <Link
                   key={"course4"}
-                  href={"/departments/adft"}
+                  href={"/pages/departments/adft"}
                   className={styles.courseLink}
                 >
                   <p
@@ -194,7 +194,7 @@ async function MainPage() {
                   For Anti-Ragging Committee list &nbsp;
                   <Link
                     key={"AntiRagging"}
-                    href={"/AntiRagging"}
+                    href={"/pages/AntiRagging"}
                     className={styles.Link}
                   >
                     Click here
