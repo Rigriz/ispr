@@ -1,18 +1,27 @@
-
+'use client'
 import DOMPurify from "isomorphic-dompurify";
-import getStaticProps from '@/app/Components/getdata';
 import styles from "@/app/Styles/main.module.css";
 import Link from "next/link";
+import featchData from "../api/fetchdata";
+import { useRouter } from "next/navigation";
+
+
+export const metadata ={
+  title:"ISRP"
+}
 async function featch() {
   try {
-    const data = await getStaticProps();
-    return data.props.webContent.Home; //Return the homepage content on success
+    const data = await featchData("Home");
+    console.log(data);
+    return data.props.webContent; //Return the homepage content on success
   } catch (error) {
     console.error(
       "Error retrieving data from MongoDB getDataFromMongo:",
       error,
     );
-    return { error: error.message }; // Return an error object on failure
+    return {
+      error: error.message
+    }; // Return an error object on failure
   }
 }
 async function MainPage() {
@@ -64,19 +73,30 @@ async function MainPage() {
                 />
               </div>
               <div className={styles.grievance}>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: DOMPurify.sanitize(data.GrievanceTitle),
-                  }}
-                />{" "}
-                <a className={styles.Link} href={data.GrievanceLink}>CLICK HERE</a>
+              
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: DOMPurify.sanitize(data.GrievanceTitle),
+                    }}
+                  onClick={()=>Router.push('/grievance')}/>{" "}
+                <Link
+                  key={"Mandatory"}
+                  href={"/grievance"}
+                >
+                  <p className={styles.Link} >CLICK HERE</p>
+                </Link>
               </div>
               <div className={styles.disclosure}>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: DOMPurify.sanitize(data.MandatoryTitle),
-                  }}
-                />{" "}
+                <Link
+                  key={"Grievance"}
+                  href={"/grievance"}
+                >
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: DOMPurify.sanitize(data.MandatoryTitle),
+                    }}
+                  />{" "}
+                </Link>
                 <a className={styles.Link} href={data.MandatoryLink}>CLICK HERE</a>
               </div>
             </div>
@@ -121,7 +141,7 @@ async function MainPage() {
               <div className={styles.coursesList}>
                 <Link
                   key={"course1"}
-                  href={"http://www.google.com"}
+                  href={"/departments/Cse"}
                   className={styles.courseLink}
                 >
                   <p
@@ -132,7 +152,7 @@ async function MainPage() {
                 </Link>
                 <Link
                   key={"course2"}
-                  href={"http://www.google.com"}
+                  href={"/departments/ec"}
                   className={styles.courseLink}
                 >
                   <p
@@ -143,7 +163,7 @@ async function MainPage() {
                 </Link>
                 <Link
                   key={"course3"}
-                  href={"http://www.google.com"}
+                  href={"/departments/mec"}
                   className={styles.courseLink}
                 >
                   <p
@@ -154,7 +174,7 @@ async function MainPage() {
                 </Link>
                 <Link
                   key={"course4"}
-                  href={"http://www.google.com"}
+                  href={"/departments/adft"}
                   className={styles.courseLink}
                 >
                   <p
