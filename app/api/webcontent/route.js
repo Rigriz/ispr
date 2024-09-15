@@ -35,7 +35,12 @@ export async function getStaticProps(request) {
         //console.log(json); whole data of webcontent
         const record = json[request];
         //console.log(record,'sdf')
-        return record;
+        return {
+            props: {
+              webContent: record, //sending the { json data }
+            },
+            revalidate: 6000, // revalidate every 400 second
+          };
     } catch (error) {
         if (error.codeName === 'AtlasError') {
             console.error('AtlasError:', error.code, error.codeName, error.errmsg);
