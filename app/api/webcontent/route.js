@@ -31,11 +31,11 @@ export async function getStaticProps(request) {
             }
             return acc;
         }, {});
-        return json;
+        //return json;
         //console.log(json); whole data of webcontent
-        //const record = json[request];
+        const record = json[request];
         //console.log(record,'sdf')
-        //return record;
+        return record;
     } catch (error) {
         if (error.codeName === 'AtlasError') {
             console.error('AtlasError:', error.code, error.codeName, error.errmsg);
