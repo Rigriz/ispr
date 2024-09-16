@@ -2,14 +2,26 @@ import styles from "@/app/Styles/antiragging.module.css";
 import featchData from "../../api/fetchdata";
 
 
-export const metadata ={
-    title:"ISRP | E&C"
+export const metadata = {
+    title: "ISRP | E&C"
 }
 async function featch() {
     try {
-        const data = await featchData("ec");
-        console.log(data);
-        return data.props.webContent; //Return the homepage content on success
+        const apiUrl = 'http://localhost:3000/api/webcontent';
+        const params = {
+            webcontent: 'ec',
+        };
+        const queryString = new URLSearchParams(params).toString();
+        const response = await fetch(`${apiUrl}?${queryString}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        const jsonData = await response.json(); // Parse the response data as JSON
+        //console.log(jsonData.props.webContent, 'RealData sd');
+        // const data = await featchData("cse"); //aditional connection
+        return jsonData.props.webContent; //Return the homepage content on success
     } catch (error) {
         console.error(
             "Error retrieving data from MongoDB getDataFromMongo:",
