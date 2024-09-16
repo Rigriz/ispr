@@ -2,14 +2,27 @@ import styles from '@/app/Styles/antiragging.module.css';
 import featchData from "../api/fetchdata";
 
 
-export const metadata ={
-    title:"ISRP | AntiRagging"
+export const metadata = {
+    title: "ISRP | AntiRagging"
 }
-async function featch() {
+async function getDataFromMongo() {
     try {
-        const data = await featchData("AntiRagging");
-        console.log(data);
-        return data.props.webContent; //Return the homepage content on success
+        const apiUrl = 'http://localhost:3000/api/webcontent';
+        const params = {
+            webcontent: 'AntiRagging',
+        };
+        const queryString = new URLSearchParams(params).toString();
+        const response = await fetch(`${apiUrl}?${queryString}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        const jsonData = await response.json(); // Parse the response data as JSON
+        //console.log(jsonData.props.webContent, 'RealData sd');
+        // const data = await featchData("AntiRagging"); //aditional connection
+        //console.log(data);
+        return jsonData.props.webContent; //Return the homepage content on success
     } catch (error) {
         console.error(
             "Error retrieving data from MongoDB getDataFromMongo:",
@@ -81,8 +94,8 @@ const MembersTable = ({ data, identifier }) => {
     );
 }
 export default async function antiragging() {
-    const data = await featch();
-   // console.log(data, "gotta");
+    const data = await getDataFromMongo();
+    // console.log(data, "gotta");
     // console.log(data, "heimana")
     return (
         <>

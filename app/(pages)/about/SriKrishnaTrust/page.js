@@ -1,14 +1,27 @@
 import styles from "@/app/Styles/SrikrishnaTrust.module.css";
 import featchData from "@/app/(pages)/api/fetchdata";
 
-export const metadata ={
-    title:"ISRP | Sri Krishna Shikshana Prathisthana Trust"
-} 
-async function featch() {
+export const metadata = {
+    title: "ISRP | Sri Krishna Shikshana Prathisthana Trust"
+}
+async function getDataFromMongo() {
     try {
-        const data = await featchData("SriKrishnaShikshanaPrathisthanaTrust");
-        console.log(data);
-        return data.props.webContent; //Return the homepage content on success
+        const apiUrl = 'http://localhost:3000/api/webcontent';
+        const params = {
+            webcontent: 'SriKrishnaShikshanaPrathisthanaTrustGoverningCouncilandFacultyDetails',
+        };
+        const queryString = new URLSearchParams(params).toString();
+        const response = await fetch(`${apiUrl}?${queryString}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        const jsonData = await response.json(); // Parse the response data as JSON
+        //console.log(jsonData.props.webContent, 'RealData sd');
+        //const data = await featchData("SriKrishnaShikshanaPrathisthanaTrust"); //aditional connection
+        //console.log(data);
+        return jsonData.props.webContent; //Return the homepage content on success
     } catch (error) {
         console.error(
             "Error retrieving data from MongoDB getDataFromMongo:",
@@ -21,7 +34,7 @@ async function featch() {
 }
 
 const TrustMembersTable = ({ data, identifier }) => {
-   // console.log(data);
+    // console.log(data);
     // const id = [identifier]
     // console.log(data?.[id]);
     let tableType = ["SL.No", "Name", "Designation"];;
@@ -63,7 +76,7 @@ const TrustMembersTable = ({ data, identifier }) => {
     );
 }
 export default async function aboutus() {
-    const data = await featch();
+    const data = await getDataFromMongo();
     //console.log(data.trustMembers, "gotta");
     //console.log(data, "heimana")
     return (
@@ -71,7 +84,7 @@ export default async function aboutus() {
             <section className={styles.section}>
                 <div className={styles.content}>
 
-                    <p className={styles.heading}>{}</p>
+                    <p className={styles.heading}>{ }</p>
                     <div className={styles.group}>
                         <div >
                             <p className={styles.description}>{data.title}</p>
@@ -132,7 +145,7 @@ export default async function aboutus() {
                     </div>
                 </div>
             </section>
-            </>
+        </>
     );
 }
 export { aboutus };

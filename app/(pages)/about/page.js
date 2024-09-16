@@ -4,24 +4,37 @@ import featchData from "../api/fetchdata";
 
 
 
-export const metadata ={
-  title:"ISRP | About"
+export const metadata = {
+  title: "ISRP | About"
 }
 
 async function featch() {
-    try {
-        const data = await featchData("Aboutus");
-        console.log(data);
-        return data.props.webContent; //Return the homepage content on success
-    } catch (error) {
-        console.error(
-            "Error retrieving data from MongoDB getDataFromMongo:",
-            error,
-        );
-        return {
-            error: error.message
-        }; // Return an error object on failure
-    }
+  try {
+    const apiUrl = 'http://localhost:3000/api/webcontent';
+    const params = {
+      webcontent: 'Aboutus',
+    };
+    const queryString = new URLSearchParams(params).toString();
+    const response = await fetch(`${apiUrl}?${queryString}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    });
+    const jsonData = await response.json(); // Parse the response data as JSON
+    //console.log(jsonData.props.webContent, 'RealData sd');
+    //const data = await featchData("Aboutus");
+    //console.log(data);
+    return jsonData.props.webContent; //Return the homepage content on success
+  } catch (error) {
+    console.error(
+      "Error retrieving data from MongoDB getDataFromMongo:",
+      error,
+    );
+    return {
+      error: error.message
+    }; // Return an error object on failure
+  }
 }
 export default async function about() {
   const data = await featch();

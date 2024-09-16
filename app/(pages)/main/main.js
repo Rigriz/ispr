@@ -9,11 +9,23 @@ import { useRouter } from "next/navigation";
 export const metadata ={
   title:"ISRP"
 }
-async function featch() {
+async function getDataFromMongo() {
   try {
-    const data = await featchData("Home");
-    console.log(data);
-    return data.props.webContent; //Return the homepage content on success
+    const apiUrl = 'http://localhost:3000/api/webcontent';
+        const params = {
+            webcontent: 'Home',
+        };
+        const queryString = new URLSearchParams(params).toString();
+        const response = await fetch(`${apiUrl}?${queryString}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        const jsonData = await response.json(); // Parse the response data as JSON
+        //console.log(jsonData.props.webContent, 'RealData sd');
+        // const data = await featchData("cse"); //aditional connection
+     return jsonData.props.webContent; //Return the homepage content on success
   } catch (error) {
     console.error(
       "Error retrieving data from MongoDB getDataFromMongo:",
@@ -25,9 +37,9 @@ async function featch() {
   }
 }
 async function MainPage() {
-  const data = await featch();
-  console.log(data.page, "gotta");
-  console.log(data.page, "gotta");
+  const data = await getDataFromMongo();
+  //console.log(data.page, "gotta");
+  //console.log(data.page, "gotta");
   //console.log(data, "heimana");
   return (
     <>

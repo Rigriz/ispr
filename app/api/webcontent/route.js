@@ -26,21 +26,22 @@ export async function getStaticProps(request) {
         // Process the result
         const json = result.reduce((acc, item) => {
             if (item.page) {
+                //console.log(item,'rout');
                 // Ensure the field exists for a unique key
                 acc[item.page] = item;
             }
             return acc;
         }, {});
         //return json;
-        //console.log(json); whole data of webcontent
+        // console.log(json); //whole data of webcontent
         const record = json[request];
         //console.log(record,'sdf')
         return {
             props: {
-              webContent: record, //sending the { json data }
+                webContent: record, //sending the { json data }
             },
             revalidate: 6000, // revalidate every 400 second
-          };
+        };
     } catch (error) {
         if (error.codeName === 'AtlasError') {
             console.error('AtlasError:', error.code, error.codeName, error.errmsg);
@@ -64,7 +65,7 @@ export async function GET(request) {
     // const webcontent= request.query.webcontent;
     //const data = await getStaticProps(webcontent);
     // const data = await fetchData(webcontent);
-    console.log(data);
+    //console.log(data);
     //const res = await request.json()
     //const data = await fetchdata();
     return NextResponse.json(data);

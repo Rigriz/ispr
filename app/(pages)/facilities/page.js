@@ -6,11 +6,23 @@ import featchData from "../api/fetchdata";
 export const metadata ={
     title:"ISRP | Facilities"
 }
-async function featch() {
+async function getDataFromMongo() {
     try {
-        const data = await featchData("Facilities");
-        console.log(data);
-        return data.props.webContent; //Return the homepage content on success
+        const apiUrl = 'http://localhost:3000/api/webcontent';
+        const params = {
+            webcontent: 'Facilities',
+        };
+        const queryString = new URLSearchParams(params).toString();
+        const response = await fetch(`${apiUrl}?${queryString}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        const jsonData = await response.json(); // Parse the response data as JSON
+        //console.log(jsonData.props.webContent, 'RealData sd');
+        // const data = await featchData("cse"); //aditional connection
+       return jsonData.props.webContent; //Return the homepage content on success
     } catch (error) {
         console.error(
             "Error retrieving data from MongoDB getDataFromMongo:",
@@ -40,8 +52,8 @@ const Listsetter = ({ data, list }) => {
     );
 }
 export default async function cse() {
-    const data = await featch();
-   // console.log(data, "gotta");
+    const data = await getDataFromMongo();
+    //console.log(data, "gotta");
     // console.log(data, "heimana")
     return (
         <>
