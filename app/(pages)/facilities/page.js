@@ -3,11 +3,12 @@ import featchData from "../api/fetchdata";
 
 
 
-export const metadata ={
-    title:"ISRP | Facilities"
+export const metadata = {
+    title: "ISRP | Facilities"
 }
 async function getDataFromMongo() {
     try {
+        {/* 
         const apiUrl = 'http://localhost:3000/api/webcontent';
         const params = {
             webcontent: 'Facilities',
@@ -21,8 +22,9 @@ async function getDataFromMongo() {
         });
         const jsonData = await response.json(); // Parse the response data as JSON
         //console.log(jsonData.props.webContent, 'RealData sd');
-        // const data = await featchData("cse"); //aditional connection
-       return jsonData.props.webContent; //Return the homepage content on success
+     */}
+        const data = await featchData("cse"); //aditional connection
+        return data.props.webContent; //Return the homepage content on success
     } catch (error) {
         console.error(
             "Error retrieving data from MongoDB getDataFromMongo:",
@@ -39,14 +41,14 @@ const Listsetter = ({ data, list }) => {
     return (
         <>
             <div className={styles.li}>
-            <ul className={styles.list}>
-                {data && data[list] ? (
-                    data?.[id].map((header, index) => (
-                        //  console.log(header, index),
-                        <li key={index}>{header}</li>
-                    ))
-                ) : (< h1 >Data Not available</h1>)}
-                 </ul>
+                <ul className={styles.list}>
+                    {data && data[list] ? (
+                        data?.[id].map((header, index) => (
+                            //  console.log(header, index),
+                            <li key={index}>{header}</li>
+                        ))
+                    ) : (< h1 >Data Not available</h1>)}
+                </ul>
             </div >
         </>
     );

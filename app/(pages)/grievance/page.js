@@ -7,6 +7,7 @@ export const metadata ={
 }
 async function fetch() {
     try {
+    
         const data = await fetchData("Grievance");
         console.log(data);
         return data.props.webContent; // Return the homepage content on success

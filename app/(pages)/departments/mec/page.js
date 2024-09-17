@@ -8,6 +8,7 @@ export const metadata = {
 }
 async function getDataFromMongo() {
     try {
+        {/* 
         const apiUrl = 'http://localhost:3000/api/webcontent';
         const params = {
             webcontent: 'mec',
@@ -21,8 +22,9 @@ async function getDataFromMongo() {
         });
         const jsonData = await response.json(); // Parse the response data as JSON
         //console.log(jsonData.props.webContent, 'RealData sd');
-        // const data = await featchData("cse"); //aditional connection
-        return jsonData.props.webContent; //Return the homepage content on success
+        */} 
+        const data = await featchData("cse"); //aditional connection
+        return data.props.webContent; //Return the homepage content on success
         //Return the homepage content on success
     } catch (error) {
         console.error(

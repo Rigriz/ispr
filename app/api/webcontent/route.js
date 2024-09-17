@@ -40,7 +40,7 @@ export async function getStaticProps(request) {
             props: {
                 webContent: record, //sending the { json data }
             },
-            revalidate: 6000, // revalidate every 400 second
+            revalidate: 60000, // revalidate every 400 second
         };
     } catch (error) {
         if (error.codeName === 'AtlasError') {
