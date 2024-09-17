@@ -1,15 +1,11 @@
 import styles from "@/app/Styles/dept.module.css";
-import featchData from "../../api/fetchdata";
-
-
-
+//import featchData from "../../api/fetchdata";
 export const metadata = {
     title: "ISRP | CSE"
 }
 async function getDataFromMongo() {
     try {
-        {/* 
-        const apiUrl = 'http://localhost:3000/api/webcontent';
+        const apiUrl = 'https://isrp-sedies-projects.vercel.app/api/webcontent';
         const params = {
             webcontent: 'cse',
         };
@@ -20,11 +16,14 @@ async function getDataFromMongo() {
                 'Content-Type': 'application/json',
             }
         });
-        const jsonData = await response.json(); // Parse the response data as JSON
-        //console.log(jsonData.props.webContent, 'RealData sd');
-      */} 
-        const data = await featchData("cse"); //aditional connection
-        return data.props.webContent //Return the homepage content on success  data.props.webContent;
+        const jsonData = await response.json();
+        //Parse the response data as JSON
+        console.log(jsonData);
+        {/*console.log(jsonData, 'jsonData'); // Add this line to inspect jsonData
+           const data = await featchData("cse"); //aditional connection
+          return data.props.webContent //Return the homepage content on success  data.props.webContent;
+        */}
+        return jsonData;
     } catch (error) {
         console.error(
             "Error retrieving data from MongoDB getDataFromMongo:",

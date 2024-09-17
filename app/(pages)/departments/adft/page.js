@@ -2,12 +2,12 @@ import styles from "@/app/Styles/dept.module.css";
 import featchData from "../../api/fetchdata";
 
 
-export const metadata ={
-    title:"ISRP | ADFT"
+export const metadata = {
+    title: "ISRP | ADFT"
 }
 async function getDataFromMongo() {
     try {
-     {/*    const apiUrl = 'http://localhost:3000/api/webcontent';
+        const apiUrl = '';
         const params = {
             webcontent: 'adft',
         };
@@ -20,8 +20,8 @@ async function getDataFromMongo() {
         });
         const jsonData = await response.json(); // Parse the response data as JSON
         //console.log(jsonData.props.webContent, 'RealData sd');
-     */}   const data = await featchData("cse"); //aditional connection
-       return data.props.webContent; //Return the homepage content on success
+        const data = await featchData("cse"); //aditional connection
+        return data.props.webContent; //Return the homepage content on success
     } catch (error) {
         console.error(
             "Error retrieving data from MongoDB getDataFromMongo:",

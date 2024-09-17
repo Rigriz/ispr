@@ -7,8 +7,7 @@ export const metadata = {
 }
 async function getDataFromMongo() {
     try {
-        { /*
-        const apiUrl = 'http://localhost:3000/api/webcontent';
+        const apiUrl = 'https://isrp-sedies-projects.vercel.app/api/webcontent';
         const params = {
             webcontent: 'AntiRagging',
         };
@@ -20,11 +19,12 @@ async function getDataFromMongo() {
             }
         });
         const jsonData = await response.json(); // Parse the response data as JSON
-        //console.log(jsonData.props.webContent, 'RealData sd');
-         */}
-          const data = await featchData("AntiRagging"); //aditional connection
-        //console.log(data);
-        return data.props.webContent; //Return the homepage content on success
+        {/* console.log(jsonData.props.webContent, 'RealData sd');
+          //const data = await featchData("AntiRagging"); //aditional connection
+          //console.log(data);
+          // return data.props.webContent; //Return the homepage content on success
+       */}
+        return jsonData.props.webContent;
     } catch (error) {
         console.error(
             "Error retrieving data from MongoDB getDataFromMongo:",
@@ -56,7 +56,7 @@ const Listsetter = ({ data, list }) => {
     );
 }
 const MembersTable = ({ data, identifier }) => {
-    // console.log(data);
+    //console.log(data);
     // const id = identifier;
     // console.log(data?.[id]);
     const table = ["SL.No", "NameoftheFaculty", "Designation", "Position", "MobileNumber", "E-mailAddress"];
