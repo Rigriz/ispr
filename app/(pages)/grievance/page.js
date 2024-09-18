@@ -2,15 +2,30 @@ import styles from '@/app/Styles/grievance.module.css';
 import fetchData from '../api/fetchdata';
 import Link from 'next/link';
 
-export const metadata ={
-    title:"ISRP | Grievance"
+export const metadata = {
+    title: "ISRP | Grievance"
 }
-async function fetch() {
+async function getDataFromMongo() {
     try {
-    
-        const data = await fetchData("Grievance");
-        console.log(data);
-        return data.props.webContent; // Return the homepage content on success
+        const apiUrl = 'https://isrpapi.vercel.app/api/webcontent';
+        const params = {
+            webcontent: 'Grievance',
+        };
+        const queryString = new URLSearchParams(params).toString();
+        const response = await fetch(`${apiUrl}?${queryString}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        const jsonData = await response.json(); // Parse the response data as JSON
+        //console.log(jsonData.props);
+        //console.log(jsonData);
+        {/* 
+          const data = await fetchData("Grievance");
+          console.log(data);
+        */}
+        return jsonData.props.webContent; // Return the homepage content on success
     } catch (error) {
         console.error(
             "Error retrieving data from MongoDB getDataFromMongo:",
@@ -23,9 +38,9 @@ async function fetch() {
 }
 
 export default async function Antiragging() {
-    const data = await fetch();
-    console.log(data, "gotta");
-    // console.log(data, "heimana")
+    const data = await getDataFromMongo();
+    //console.log(data, "gotta");
+    //console.log(data, "heimana")
     return (
         <>
             <section className={styles.section}>

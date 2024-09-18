@@ -5,7 +5,7 @@ export const metadata = {
 }
 async function getDataFromMongo() {
     try {
-        const apiUrl = 'https://isrp-sedies-projects.vercel.app/api/webcontent';
+        const apiUrl = 'https://isrpapi.vercel.app/api/webcontent';
         const params = {
             webcontent: 'cse',
         };
@@ -18,12 +18,12 @@ async function getDataFromMongo() {
         });
         const jsonData = await response.json();
         //Parse the response data as JSON
-        console.log(jsonData);
+        //console.log(jsonData);
         {/*console.log(jsonData, 'jsonData'); // Add this line to inspect jsonData
            const data = await featchData("cse"); //aditional connection
           return data.props.webContent //Return the homepage content on success  data.props.webContent;
         */}
-        return jsonData;
+        return jsonData.props.webContent;
     } catch (error) {
         console.error(
             "Error retrieving data from MongoDB getDataFromMongo:",

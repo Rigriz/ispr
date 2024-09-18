@@ -7,7 +7,7 @@ export const metadata = {
 }
 async function getDataFromMongo() {
     try {
-        const apiUrl = 'https://isrp-sedies-projects.vercel.app/api/webcontent';
+        const apiUrl = 'https://isrpapi.vercel.app/api/webcontent';
         const params = {
             webcontent: 'AntiRagging',
         };

@@ -7,8 +7,7 @@ export const metadata = {
 }
 async function featch() {
     try {
-        {/* 
-        const apiUrl = 'http://localhost:3000/api/webcontent';
+        const apiUrl = 'https://isrpapi.vercel.app/api/webcontent';
         const params = {
             webcontent: 'ec',
         };
@@ -20,10 +19,9 @@ async function featch() {
             }
         });
         const jsonData = await response.json(); // Parse the response data as JSON
-        //console.log(jsonData.props.webContent, 'RealData sd');
-      */} 
-         const data = await featchData("cse"); //aditional connection
-        return data.props.webContent; //Return the homepage content on success
+        //console.log(jsonData.props.webContent, 'RealData sd'); 
+    // const data = await featchData("cse"); //aditional connection
+        return jsonData.props.webContent; //Return the homepage content on success
     } catch (error) {
         console.error(
             "Error retrieving data from MongoDB getDataFromMongo:",
