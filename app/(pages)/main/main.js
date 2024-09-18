@@ -1,9 +1,9 @@
-'use client'
+
 import DOMPurify from "isomorphic-dompurify";
 import styles from "@/app/Styles/main.module.css";
 import Link from "next/link";
 import featchData from "../api/fetchdata";
-import { useRouter } from "next/navigation";
+//import { useRouter } from "next/navigation";
 
 
 export const metadata = {
@@ -11,20 +11,25 @@ export const metadata = {
 }
 async function getDataFromMongo() {
   try {
-        const apiUrl = 'https://isrpapi.vercel.app/api/webcontent';
-        const params = {
-            webcontent: 'Home',
-        };
-        const queryString = new URLSearchParams(params).toString();
-        const response = await fetch(`${apiUrl}?${queryString}`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        });
-        const jsonData = await response.json(); // Parse the response data as JSON
-        //console.log(jsonData.props.webContent, 'RealData sd');
-        //const data = await featchData("cse"); //aditional connection
+    
+    const apiUrl = 'https://isrpapi.vercel.app/api/webcontent';
+    const params = {
+      webcontent: 'Home',
+    };
+    const queryString = new URLSearchParams(params).toString();
+    const response = await fetch(`${apiUrl}?${queryString}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache',
+      }
+    }); { /* */}
+    //const datas = await fetch('https://isrpapi.vercel.app/webcontent?webcontent=Home', { method: 'GET', headers: { 'Content-Type': 'application/json', } });
+    //const reso = await datas.json();
+    const jsonData = await response.json(); // Parse the response data as JSON
+    console.log(jsonData.props.webContent, 'RealData sd', "internal");
+    const data = await featchData("Home"); //aditional connection
+    //console.log(data.props.webContent);
     return jsonData.props.webContent; //Return the homepage content on success
   } catch (error) {
     console.error(
@@ -38,7 +43,7 @@ async function getDataFromMongo() {
 }
 async function MainPage() {
   const data = await getDataFromMongo();
-  //console.log(data.page, "gotta");
+  //console.log(data, "gotta");
   //console.log(data.page, "gotta");
   //console.log(data, "heimana");
   return (
@@ -90,7 +95,7 @@ async function MainPage() {
                   dangerouslySetInnerHTML={{
                     __html: DOMPurify.sanitize(data.GrievanceTitle),
                   }}
-                  onClick={() => Router.push('/grievance')} />{" "}
+                />{" "}
                 <Link
                   key={"Mandatory"}
                   href={"/grievance"}
