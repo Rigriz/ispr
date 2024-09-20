@@ -1,5 +1,5 @@
 import styles from "@/app/Styles/antiragging.module.css";
-import featchData from "../../api/fetchdata";
+//import featchData from "../../api/fetchdata";
 
 
 export const metadata = {
@@ -16,6 +16,7 @@ async function featch() {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
+                'Cache-Control': 'no-cache',
             }
         });
         const jsonData = await response.json(); // Parse the response data as JSON

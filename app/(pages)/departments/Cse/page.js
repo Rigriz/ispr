@@ -14,6 +14,7 @@ async function getDataFromMongo() {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
+                'Cache-Control': 'no-cache',
             }
         });
         const jsonData = await response.json();

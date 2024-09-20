@@ -1,5 +1,5 @@
 import styles from '@/app/Styles/grievance.module.css';
-import fetchData from '../api/fetchdata';
+//import fetchData from '../api/fetchdata';
 import Link from 'next/link';
 
 export const metadata = {
@@ -16,6 +16,7 @@ async function getDataFromMongo() {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
+                'Cache-Control': 'no-cache',
             }
         });
         const jsonData = await response.json(); // Parse the response data as JSON

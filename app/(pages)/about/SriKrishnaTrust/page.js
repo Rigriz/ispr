@@ -1,5 +1,5 @@
 import styles from "@/app/Styles/SrikrishnaTrust.module.css";
-import featchData from "@/app/(pages)/api/fetchdata";
+//import featchData from "@/app/(pages)/api/fetchdata";
 
 export const metadata = {
     title: "ISRP | Sri Krishna Shikshana Prathisthana Trust"
@@ -17,6 +17,7 @@ async function getDataFromMongo() {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
+                'Cache-Control': 'no-cache',
             }
         });
         const jsonData = await response.json(); // Parse the response data as JSON
