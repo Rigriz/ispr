@@ -2,9 +2,8 @@
 import DOMPurify from "isomorphic-dompurify";
 import styles from "@/app/Styles/main.module.css";
 import Link from "next/link";
-import featchData from "../api/fetchdata";
+//import featchData from "../api/fetchdata";
 //import { useRouter } from "next/navigation";
-
 
 export const metadata = {
   title: "ISRP"
@@ -27,8 +26,8 @@ async function getDataFromMongo() {
     //const datas = await fetch('https://isrpapi.vercel.app/webcontent?webcontent=Home', { method: 'GET', headers: { 'Content-Type': 'application/json', } });
     //const reso = await datas.json();
     const jsonData = await response.json(); // Parse the response data as JSON
-    console.log(jsonData.props.webContent, 'RealData sd', "internal");
-    const data = await featchData("Home"); //aditional connection
+    //console.log(jsonData.props.webContent, 'RealData sd', "internal");
+    //const data = await featchData("Home"); //aditional connection
     //console.log(data.props.webContent);
     return jsonData.props.webContent; //Return the homepage content on success
   } catch (error) {

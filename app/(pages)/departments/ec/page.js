@@ -21,7 +21,7 @@ async function featch() {
         });
         const jsonData = await response.json(); // Parse the response data as JSON
         //console.log(jsonData.props.webContent, 'RealData sd'); 
-    // const data = await featchData("cse"); //aditional connection
+        // const data = await featchData("cse"); //aditional connection
         return jsonData.props.webContent; //Return the homepage content on success
     } catch (error) {
         console.error(

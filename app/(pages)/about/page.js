@@ -6,9 +6,8 @@ export const metadata = {
   title: "ISRP | About"
 }
 
-async function featch() {
+async function getDataFromMongo() {
   try {
-
     const apiUrl = 'https://isrpapi.vercel.app/api/webcontent';
     const params = {
       webcontent: 'Aboutus',
@@ -25,7 +24,7 @@ async function featch() {
     //console.log(jsonData.props.webContent, 'RealData sd');
     //const data = await featchData("Aboutus");
     //console.log(data);
-    return jsonData.props.wsebContent; //Return the homepage content on success
+    return jsonData.props.webContent; //Return the homepage content on success
   } catch (error) {
     console.error(
       "Error retrieving data from MongoDB getDataFromMongo:",
@@ -37,8 +36,8 @@ async function featch() {
   }
 }
 export default async function about() {
-  const data = await featch();
-  // console.log(data, "heimana");
+  const data = await getDataFromMongo();
+  //console.log(data, "heimana");
   return (
     <section className={styles.section}>
       <div className={styles.content}>

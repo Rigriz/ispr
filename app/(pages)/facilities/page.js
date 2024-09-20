@@ -1,8 +1,6 @@
 import styles from "@/app/Styles/facilities.module.css";
 //import featchData from "../api/fetchdata";
 
-
-
 export const metadata = {
     title: "ISRP | Facilities"
 }

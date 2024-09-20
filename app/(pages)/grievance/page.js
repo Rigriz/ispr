@@ -37,7 +37,6 @@ async function getDataFromMongo() {
         }; // Return an error object on failure
     }
 }
-
 export default async function Antiragging() {
     const data = await getDataFromMongo();
     //console.log(data, "gotta");
