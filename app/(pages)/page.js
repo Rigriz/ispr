@@ -2,7 +2,6 @@ import styles from "../Styles/page.module.css";
 import style from "../Styles/home.module.css";
 import { MainPage } from "./main/main.js";
 
-
 export const metadata ={
   title:"ISRP"
 }

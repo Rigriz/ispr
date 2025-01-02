@@ -10,10 +10,9 @@ export const metadata = {
 }
 async function getDataFromMongo() {
   try {
-    
     const apiUrl = 'https://isrpapi.vercel.app/api/webcontent';
     const params = {
-      webcontent: 'Home',
+    webcontent: 'Home',
     };
     const queryString = new URLSearchParams(params).toString();
     const response = await fetch(`${apiUrl}?${queryString}`, {
@@ -28,7 +27,7 @@ async function getDataFromMongo() {
     const jsonData = await response.json(); // Parse the response data as JSON
     //console.log(jsonData.props.webContent, 'RealData sd', "internal");
     //const data = await featchData("Home"); //aditional connection
-    //console.log(data.props.webContent);
+    //console.log(jsonData.props.webContent);
     return jsonData.props.webContent; //Return the homepage content on success
   } catch (error) {
     console.error(

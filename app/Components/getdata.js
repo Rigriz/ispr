@@ -14,7 +14,6 @@ export default async function getStaticProps() {
     // const json = JSON.parse(JSON.stringify(documents));
     //await client.close();
     // Transform array into an object with unique field as keys
-
     
     const json = documents.reduce((acc, item) => {
       if (item.page) {
