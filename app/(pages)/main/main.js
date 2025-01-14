@@ -9,7 +9,7 @@ export const metadata = {
   title: "ISRP"
 }
 async function getDataFromMongo() {
-  try {
+  try{
     const apiUrl = 'https://isrpapi.vercel.app/api/webcontent';
     const params = {
     webcontent: 'Home',
